@@ -253,17 +253,16 @@
         <h2 style="font-size:clamp(28px,3.6vw,44px);color:#fff;">Wir gehen der Ursache auf den Grund</h2>
         <p class="lead" style="max-width:680px;margin:14px auto 0;">Sichtbare Symptome sind nur die Spitze. Wir behandeln nicht das Blatt, sondern die Wurzel.</p>
         <div class="tree reveal">
-          <div class="tree__soilbg" aria-hidden="true">
-            <svg class="tree__soilwave" viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0 48 Q720 4 1440 48 L1440 80 L0 80 Z" fill="#03182e" /><path d="M0 48 Q720 4 1440 48" fill="none" stroke="rgba(174,155,105,.35)" stroke-width="2" /></svg>
-            <div class="tree__soilfill"></div>
-          </div>
           <svg viewBox="0 0 1000 940" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Baum-Grafik: oben die sichtbaren Symptome, unten in den Wurzeln die zugrunde liegenden Ursachen.">
             <defs><linearGradient id="trunkGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgba(255,255,255,0.12)" /><stop offset="1" stop-color="rgba(255,255,255,0.26)" /></linearGradient></defs>
+            <!-- Erde: im selben SVG-Koordinatensystem wie der Stamm -> immer exakt ausgerichtet -->
+            <path class="tree__soil-fill" d="M-3000 590 Q500 560 4000 590 L4000 1320 L-3000 1320 Z" />
+            <path class="tree__soil-line" d="M-3000 590 Q500 560 4000 590" />
             <text class="tree__axis" x="500" y="42" text-anchor="middle">SYMPTOME</text>
             <ellipse class="tree__crown" cx="500" cy="255" rx="340" ry="215" />
             <ellipse class="tree__crown" cx="365" cy="265" rx="165" ry="150" />
             <ellipse class="tree__crown" cx="645" cy="265" rx="158" ry="148" />
-            <path class="tree__trunk-fill" d="M458 590 C 470 510 484 440 489 334 L 511 334 C 516 440 530 510 542 590 Z" />
+            <path class="tree__trunk-fill" d="M458 592 C 470 510 484 440 489 334 L 511 334 C 516 440 530 510 542 592 Z" />
             <path class="tree__line tree__branch" pathLength="1" d="M500 330 C 470 252 430 196 360 154" />
             <path class="tree__line tree__branch" pathLength="1" d="M499 382 C 455 324 388 270 314 239" />
             <path class="tree__line tree__branch" pathLength="1" d="M498 432 C 448 394 378 352 304 324" />
