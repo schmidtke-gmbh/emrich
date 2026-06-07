@@ -30,32 +30,42 @@
 
   <main id="main">
     <section class="funnel">
-      <div class="funnel__inner">
+      <div class="funnel__head">
+        <p class="eyebrow">Kostenlos &amp; unverbindlich</p>
+        <h1>Dein Informationsgespräch</h1>
+        <p class="funnel__sub">In 5 kurzen Schritten – danach melden wir uns telefonisch bei dir.</p>
+      </div>
+
+      <div class="funnel__card">
         <div class="progress">
-          <div class="progress__pct" id="pct">14%</div>
-          <div class="progress__bar"><div class="progress__fill" id="fill"></div></div>
+          <div class="progress__top">
+            <span id="stepLabel">Schritt 1 von 5</span>
+            <span class="progress__pct" id="pct">20%</span>
+          </div>
+          <div class="progress__bar"><div class="progress__fill" id="fill" style="width:20%"></div></div>
         </div>
 
         <form id="funnelForm" name="anfrage" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="danke.html">
           <input type="hidden" name="form-name" value="anfrage" />
           <p hidden><label>Bitte nicht ausfüllen: <input name="bot-field" /></label></p>
-          <!-- Schritt 1 -->
+
           <div class="step active" data-step="1">
-            <h2>Ihr Vorname</h2>
-            <div class="field"><input type="text" name="vorname" placeholder="Bsp. John" required /></div>
-            <div class="actions"><button type="button" class="btn btn--lg" data-next>Nächster Schritt</button></div>
+            <h2>Wie ist dein Vorname?</h2>
+            <div class="field"><input type="text" name="vorname" placeholder="Vorname" required /></div>
+            <div class="actions"><button type="button" class="btn btn--lg" data-next>Weiter</button></div>
           </div>
 
-          <!-- Schritt 2 -->
           <div class="step" data-step="2">
-            <h2>Ihr Nachname</h2>
-            <div class="field"><input type="text" name="nachname" placeholder="Bsp. Mueller" required /></div>
-            <div class="actions"><button type="button" class="btn btn--lg" data-next>Nächster Schritt</button></div>
+            <h2>Und dein Nachname?</h2>
+            <div class="field"><input type="text" name="nachname" placeholder="Nachname" required /></div>
+            <div class="actions">
+              <button type="button" class="funnel__back" data-back>Zurück</button>
+              <button type="button" class="btn btn--lg" data-next>Weiter</button>
+            </div>
           </div>
 
-          <!-- Schritt 3 -->
           <div class="step" data-step="3">
-            <h2>Wie sind Sie auf uns aufmerksam geworden?</h2>
+            <h2>Wie bist du auf uns aufmerksam geworden?</h2>
             <div class="choice-list" data-choice="quelle">
               <button type="button" class="choice">Google</button>
               <button type="button" class="choice">Instagram</button>
@@ -65,66 +75,82 @@
               <button type="button" class="choice">Artikel</button>
             </div>
             <input type="hidden" name="quelle" />
-            <div class="actions"><button type="button" class="btn btn--lg" data-next>Nächster Schritt</button></div>
+            <div class="actions">
+              <button type="button" class="funnel__back" data-back>Zurück</button>
+              <button type="button" class="btn btn--lg" data-next>Weiter</button>
+            </div>
           </div>
 
-          <!-- Schritt 4 -->
           <div class="step" data-step="4">
-            <h2>Welche Beschwerden haben Sie?</h2>
-            <div class="field"><textarea name="beschwerden" placeholder="Beschwerden"></textarea></div>
-            <div class="actions"><button type="button" class="btn btn--lg" data-next>Nächster Schritt</button></div>
+            <h2>Welche Beschwerden hast du?</h2>
+            <div class="field"><textarea name="beschwerden" placeholder="Beschreibe kurz, was dich beschäftigt …"></textarea></div>
+            <div class="actions">
+              <button type="button" class="funnel__back" data-back>Zurück</button>
+              <button type="button" class="btn btn--lg" data-next>Weiter</button>
+            </div>
           </div>
 
-          <!-- Schritt 5 -->
           <div class="step" data-step="5">
-            <h2>Geben Sie hier Ihre Kontaktinformationen ein</h2>
-            <p class="funnel__hint">Wir respektieren Ihre Privatsphäre und geben Ihre Daten nicht weiter!</p>
-            <div class="field"><input type="email" name="email" placeholder="📧 E-Mail *" required /></div>
-            <div class="field"><input type="tel" name="telefon" placeholder="+49 …" required /></div>
-            <div class="actions"><button type="submit" class="btn btn--lg">Daten absenden</button></div>
+            <h2>Wie können wir dich erreichen?</h2>
+            <p class="funnel__hint">Wir respektieren deine Privatsphäre und geben deine Daten nicht weiter.</p>
+            <div class="field"><input type="email" name="email" placeholder="E-Mail-Adresse" required /></div>
+            <div class="field"><input type="tel" name="telefon" placeholder="Telefonnummer" required /></div>
+            <div class="actions">
+              <button type="button" class="funnel__back" data-back>Zurück</button>
+              <button type="submit" class="btn btn--lg">Anfrage absenden</button>
+            </div>
           </div>
         </form>
       </div>
+
+      <p class="funnel__note">🔒 Deine Angaben werden vertraulich behandelt.</p>
     </section>
   </main>
 
   <script src="js/main.js"></script>
   <script>
     (function () {
-      const steps = [...document.querySelectorAll('.step')];
+      const form = document.getElementById('funnelForm');
+      const steps = Array.prototype.slice.call(form.querySelectorAll('.step'));
       const total = steps.length;
       let current = 0;
       const fill = document.getElementById('fill');
       const pct = document.getElementById('pct');
+      const stepLabel = document.getElementById('stepLabel');
 
       function render() {
         steps.forEach((s, i) => s.classList.toggle('active', i === current));
         const p = Math.round(((current + 1) / total) * 100);
         fill.style.width = p + '%';
         pct.textContent = p + '%';
+        stepLabel.textContent = 'Schritt ' + (current + 1) + ' von ' + total;
+        const f = steps[current].querySelector('input:not([type=hidden]), textarea');
+        if (f) setTimeout(function () { f.focus(); }, 80);
       }
+      function validate() {
+        const inp = steps[current].querySelector('input[required], textarea[required]');
+        if (inp && !inp.value.trim()) { inp.focus(); inp.classList.add('invalid'); return false; }
+        return true;
+      }
+      function next() { if (validate() && current < total - 1) { current++; render(); } }
+      function back() { if (current > 0) { current--; render(); } }
 
-      document.querySelectorAll('[data-next]').forEach((btn) => {
-        btn.addEventListener('click', () => {
-          const step = steps[current];
-          const input = step.querySelector('input[required], textarea');
-          if (input && input.hasAttribute('required') && !input.value.trim()) {
-            input.focus();
-            input.style.borderColor = 'var(--red)';
-            return;
-          }
-          if (current < total - 1) { current++; render(); }
-        });
-      });
+      form.querySelectorAll('[data-next]').forEach((b) => b.addEventListener('click', next));
+      form.querySelectorAll('[data-back]').forEach((b) => b.addEventListener('click', back));
+      form.querySelectorAll('input, textarea').forEach((i) => i.addEventListener('input', () => i.classList.remove('invalid')));
+      form.querySelectorAll('input').forEach((i) => i.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && current < total - 1) { e.preventDefault(); next(); }
+      }));
 
-      // Auswahl-Buttons
-      document.querySelectorAll('[data-choice]').forEach((group) => {
+      // Auswahl-Antwort: auswählen + automatisch weiter
+      form.querySelectorAll('[data-choice]').forEach((group) => {
         const hidden = group.parentElement.querySelector('input[type=hidden]');
         group.querySelectorAll('.choice').forEach((c) => {
           c.addEventListener('click', () => {
             group.querySelectorAll('.choice').forEach((x) => x.classList.remove('selected'));
             c.classList.add('selected');
-            if (hidden) hidden.value = c.textContent;
+            if (hidden) hidden.value = c.textContent.trim();
+            setTimeout(function () { if (current < total - 1) { current++; render(); } }, 300);
           });
         });
       });

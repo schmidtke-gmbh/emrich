@@ -337,8 +337,29 @@
           <h2 style="font-size:clamp(24px,3vw,36px);">Heilung beginnt in der Zelle</h2>
           <p class="lead" style="margin-top:16px;">Long Covid und Post-Vac wirken bis tief in die Zellen – sie stören Mitochondrien, Energieproduktion und Immunregulation. Genau dort setzt unser Cell Reset Konzept an: Wir schaffen die Bedingungen, unter denen sich deine Zellen wieder regenerieren können.</p>
         </div>
-        <div class="sci-card__media">
-          <img src="https://d8j0ntlcm91z4.cloudfront.net/user_39bpvnosVvqwhbus3q5PhClCw2s/hf_20260606_203817_cbef0d74-270d-4367-8688-986c961edb40.png" alt="Zellen und Mitochondrien – Behandlung auf Zellebene" loading="lazy" onerror="this.style.display='none'">
+        <div class="sci-card__media sci-card__media--mito">
+          <div class="mito" role="img" aria-label="Animierte Mitochondrie – das Kraftwerk der Zelle">
+            <svg class="mito__svg" viewBox="0 0 440 320" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="mitoGlow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#ae9b69" stop-opacity="0.5" /><stop offset="1" stop-color="#ae9b69" stop-opacity="0" /></radialGradient>
+                <clipPath id="mitoClip"><ellipse cx="220" cy="160" rx="163" ry="71" /></clipPath>
+              </defs>
+              <ellipse class="mito__glow" cx="220" cy="160" rx="195" ry="105" />
+              <g transform="rotate(-28 220 160)">
+                <ellipse class="mito__outer" cx="220" cy="160" rx="178" ry="84" />
+                <ellipse class="mito__inner" cx="220" cy="160" rx="163" ry="71" />
+                <g clip-path="url(#mitoClip)">
+                  <path class="mito__crista" d="M68 160 L68 118 L106 118 L106 202 L144 202 L144 118 L182 118 L182 202 L220 202 L220 118 L258 118 L258 202 L296 202 L296 118 L334 118 L334 202 L372 160" />
+                  <path class="mito__pulse" pathLength="1" d="M68 160 L68 118 L106 118 L106 202 L144 202 L144 118 L182 118 L182 202 L220 202 L220 118 L258 118 L258 202 L296 202 L296 118 L334 118 L334 202 L372 160" />
+                  <circle class="mito__granule mito__granule--1" cx="122" cy="160" r="4" />
+                  <circle class="mito__granule mito__granule--2" cx="206" cy="150" r="3.5" />
+                  <circle class="mito__granule mito__granule--3" cx="286" cy="168" r="4" />
+                  <circle class="mito__granule mito__granule--4" cx="246" cy="174" r="3" />
+                </g>
+              </g>
+            </svg>
+            <span class="mito__cap">Mitochondrium – das Kraftwerk der Zelle</span>
+          </div>
         </div>
       </div>
     </section>

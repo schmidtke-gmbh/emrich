@@ -142,6 +142,27 @@ section { position: relative; }
 }
 
 /* ===========================================================
+   ANIMIERTE MITOCHONDRIE (Kraftwerk der Zelle)
+   =========================================================== */
+.sci-card__media--mito { background: linear-gradient(150deg, #06345f, #04223f); display: flex; align-items: center; justify-content: center; padding: 24px; }
+.mito { width: 94%; max-width: 440px; text-align: center; }
+.mito__cap { display: block; margin-top: 14px; color: rgba(255,255,255,.85); font-family: var(--font-head); font-weight: 600; font-size: 14px; letter-spacing: .4px; }
+.mito__svg { width: 100%; height: auto; display: block; overflow: visible; }
+.mito__glow { fill: url(#mitoGlow); transform-box: fill-box; transform-origin: center; animation: mitoGlow 3.8s ease-in-out infinite; }
+.mito__outer { fill: rgba(174,155,105,.07); stroke: var(--gold); stroke-width: 4; }
+.mito__inner { fill: none; stroke: rgba(174,155,105,.3); stroke-width: 1.5; }
+.mito__crista { fill: none; stroke: var(--gold); stroke-width: 9; stroke-linejoin: round; stroke-linecap: round; opacity: .9; }
+.mito__pulse { fill: none; stroke: #f3e6c5; stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; stroke-dasharray: 0.05 1; filter: drop-shadow(0 0 6px rgba(243,230,197,.9)); animation: mitoPulse 4.5s linear infinite; }
+.mito__granule { fill: rgba(243,230,197,.85); animation: mitoTwinkle 3.6s ease-in-out infinite; }
+.mito__granule--2 { animation-delay: .9s; }
+.mito__granule--3 { animation-delay: 1.8s; }
+.mito__granule--4 { animation-delay: 2.7s; }
+@keyframes mitoGlow { 0%, 100% { opacity: .5; transform: scale(1); } 50% { opacity: .9; transform: scale(1.08); } }
+@keyframes mitoPulse { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes mitoTwinkle { 0%, 100% { opacity: .35; } 50% { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .mito__glow, .mito__pulse, .mito__granule { animation: none !important; } }
+
+/* ===========================================================
    ENSO-DEKO (Pinselkreis: dick -> dünn, offener Ring)
    .deco = parallax-Wrapper, .enso = der Ring (eigene Rotation)
    =========================================================== */
@@ -812,6 +833,38 @@ section { position: relative; }
 .danke__check { width: 84px; height: 84px; border-radius: 50%; background: var(--gold); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 26px; box-shadow: 0 14px 34px rgba(174,155,105,.4); }
 .danke__check svg { width: 42px; height: 42px; }
 .danke h1 { font-size: clamp(30px, 4vw, 46px); margin-bottom: 16px; }
+
+/* ===========================================================
+   FORMULAR (Funnel) – aufgewertete Karte & Schritte
+   =========================================================== */
+.funnel__head { text-align: center; max-width: 620px; margin: 0 auto 26px; }
+.funnel__head h1 { font-size: clamp(28px, 4vw, 40px); color: var(--navy); margin-top: 6px; }
+.funnel__sub { color: var(--text-muted); margin-top: 10px; }
+.funnel__card { width: 100%; max-width: 620px; margin: 0 auto; background: #fff; border: 1px solid rgba(4,45,95,.08); border-radius: 28px; box-shadow: 0 30px 70px rgba(4,45,95,.18); padding: 44px 42px; text-align: center; }
+.funnel__note { text-align: center; color: var(--text-muted); font-size: 14px; margin-top: 20px; }
+.progress { margin-bottom: 32px; }
+.progress__top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+.progress__top span { font-family: var(--font-head); font-weight: 600; font-size: 13px; color: var(--text-muted); }
+.progress__top .progress__pct { color: var(--gold); }
+.progress__bar { height: 6px; background: rgba(4,45,95,.1); border-radius: 6px; overflow: hidden; }
+.progress__fill { height: 100%; background: var(--gold); border-radius: 6px; transition: width .4s ease; }
+.step.active { animation: stepIn .4s ease; }
+@keyframes stepIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.funnel .actions { margin-top: 32px; display: flex; gap: 12px; justify-content: center; align-items: center; flex-wrap: wrap; }
+.funnel__back { background: none; border: 0; color: var(--text-muted); font-family: var(--font-head); font-weight: 600; font-size: 16px; cursor: pointer; padding: 14px 20px; border-radius: 60px; transition: color .2s, background .2s; }
+.funnel__back:hover { color: var(--navy); background: rgba(4,45,95,.06); }
+.funnel .invalid { border-color: var(--red) !important; box-shadow: 0 0 0 3px rgba(255,4,0,.1); }
+/* Form/Danke immer sichtbar (Reveal-System aushebeln) */
+.funnel .reveal, .danke .reveal { opacity: 1 !important; transform: none !important; }
+/* Danke-Schritte */
+.danke__steps { display: grid; gap: 14px; max-width: 470px; margin: 30px auto 0; text-align: left; }
+.danke__step { display: flex; gap: 16px; align-items: flex-start; background: #fff; border: 1px solid rgba(4,45,95,.08); border-radius: 16px; box-shadow: var(--shadow); padding: 18px 20px; }
+.danke__num { flex: 0 0 auto; width: 34px; height: 34px; border-radius: 50%; background: var(--gold); color: #fff; font-family: var(--font-head); font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.danke__step h3 { font-size: 17px; color: var(--navy); margin-bottom: 3px; }
+.danke__step p { color: var(--text-muted); font-size: 15px; }
+.danke__hint { color: var(--text-muted); margin-top: 24px; }
+@media (prefers-reduced-motion: reduce) { .step.active { animation: none; } }
+@media (max-width: 540px) { .funnel__card { padding: 30px 20px; } }
 
 /* ===========================================================
    PROZESS-FLOW (konvergierende Verbindungslinien)
