@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Informationsgespräch vereinbaren | Praxis Emrich</title>
+  <meta name="description" content="Vereinbaren Sie Ihr kostenloses 15-minütiges Informationsgespräch bei der Gesundheitspraxis Emrich in Reutlingen." />
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="nav__logo" href="index.html" aria-label="EMRICH Gesundheitspraxis Startseite">
+        <img class="nav__logo-img" src="images/logo.png" alt="EMRICH Gesundheitspraxis" />
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#konzept">Unser Konzept</a></li>
+        <li><a href="index.html#therapie">Die Therapie</a></li>
+        <li><a href="index.html#patienten">Erfahrungen</a></li>
+        <li><a href="index.html#ueber-uns">Über uns</a></li>
+        <li class="nav__links-cta"><a class="btn" href="anfrage.html">Informationsgespräch vereinbaren</a></li>
+      </ul>
+      <a class="btn nav__cta" href="anfrage.html">Informationsgespräch vereinbaren</a>
+      <button class="nav__burger" id="burger" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="funnel">
+      <div class="funnel__inner">
+        <div class="progress">
+          <div class="progress__pct" id="pct">14%</div>
+          <div class="progress__bar"><div class="progress__fill" id="fill"></div></div>
+        </div>
+
+        <form id="funnelForm" name="anfrage" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="danke.html">
+          <input type="hidden" name="form-name" value="anfrage" />
+          <p hidden><label>Bitte nicht ausfüllen: <input name="bot-field" /></label></p>
+          <!-- Schritt 1 -->
+          <div class="step active" data-step="1">
+            <h2>Ihr Vorname</h2>
+            <div class="field"><input type="text" name="vorname" placeholder="Bsp. John" required /></div>
+            <div class="actions"><button type="button" class="btn btn--lg" data-next>Nächster Schritt</button></div>
+          </div>
+
+          <!-- Schritt 2 -->
+          <div class="step" data-step="2">
+            <h2>Ihr Nachname</h2>
+            <div class="field"><input type="text" name="nachname" placeholder="Bsp. Mueller" required /></div>
+            <div class="actions"><button type="button" class="btn btn--lg" data-next>Nächster Schritt</button></div>
+          </div>
+
+          <!-- Schritt 3 -->
+          <div class="step" data-step="3">
+            <h2>Wie sind Sie auf uns aufmerksam geworden?</h2>
+            <div class="choice-list" data-choice="quelle">
+              <button type="button" class="choice">Google</button>
+              <button type="button" class="choice">Instagram</button>
+              <button type="button" class="choice">YouTube</button>
+              <button type="button" class="choice">Facebook</button>
+              <button type="button" class="choice">Empfehlung</button>
+              <button type="button" class="choice">Artikel</button>
+            </div>
+            <input type="hidden" name="quelle" />
+            <div class="actions"><button type="button" class="btn btn--lg" data-next>Nächster Schritt</button></div>
+          </div>
+
+          <!-- Schritt 4 -->
+          <div class="step" data-step="4">
+            <h2>Welche Beschwerden haben Sie?</h2>
+            <div class="field"><textarea name="beschwerden" placeholder="Beschwerden"></textarea></div>
+            <div class="actions"><button type="button" class="btn btn--lg" data-next>Nächster Schritt</button></div>
+          </div>
+
+          <!-- Schritt 5 -->
+          <div class="step" data-step="5">
+            <h2>Geben Sie hier Ihre Kontaktinformationen ein</h2>
+            <p class="funnel__hint">Wir respektieren Ihre Privatsphäre und geben Ihre Daten nicht weiter!</p>
+            <div class="field"><input type="email" name="email" placeholder="📧 E-Mail *" required /></div>
+            <div class="field"><input type="tel" name="telefon" placeholder="+49 …" required /></div>
+            <div class="actions"><button type="submit" class="btn btn--lg">Daten absenden</button></div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script>
+    (function () {
+      const steps = [...document.querySelectorAll('.step')];
+      const total = steps.length;
+      let current = 0;
+      const fill = document.getElementById('fill');
+      const pct = document.getElementById('pct');
+
+      function render() {
+        steps.forEach((s, i) => s.classList.toggle('active', i === current));
+        const p = Math.round(((current + 1) / total) * 100);
+        fill.style.width = p + '%';
+        pct.textContent = p + '%';
+      }
+
+      document.querySelectorAll('[data-next]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const step = steps[current];
+          const input = step.querySelector('input[required], textarea');
+          if (input && input.hasAttribute('required') && !input.value.trim()) {
+            input.focus();
+            input.style.borderColor = 'var(--red)';
+            return;
+          }
+          if (current < total - 1) { current++; render(); }
+        });
+      });
+
+      // Auswahl-Buttons
+      document.querySelectorAll('[data-choice]').forEach((group) => {
+        const hidden = group.parentElement.querySelector('input[type=hidden]');
+        group.querySelectorAll('.choice').forEach((c) => {
+          c.addEventListener('click', () => {
+            group.querySelectorAll('.choice').forEach((x) => x.classList.remove('selected'));
+            c.classList.add('selected');
+            if (hidden) hidden.value = c.textContent;
+          });
+        });
+      });
+
+      render();
+    })();
+  </script>
+</body>
+</html>

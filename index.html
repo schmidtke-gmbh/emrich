@@ -1,217 +1,934 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Google Ads Statusupdate · Gesundheitspraxis Emrich · April 2026</title>
-<style>
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  :root{
-    --ink:#0f2a2e;
-    --ink-soft:#3d5a5f;
-    --paper:#fbfaf7;
-    --line:#e6e1d6;
-    --accent:#2f6e64;
-    --accent-soft:#e7f1ee;
-    --warn:#b16a2b;
-    --warn-soft:#fbeedf;
-    --good:#2f6e64;
-    --good-soft:#e7f1ee;
-    --shadow:0 10px 30px rgba(15,42,46,.06);
-  }
-  html,body{background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:880px;margin:0 auto;padding:48px 32px 80px}
-  header{padding-bottom:32px;border-bottom:1px solid var(--line);margin-bottom:40px}
-  .eyebrow{display:inline-block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:14px}
-  h1{font-size:34px;line-height:1.18;font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
-  .lede{color:var(--ink-soft);font-size:17px;max-width:640px}
-  .meta{margin-top:22px;display:flex;flex-wrap:wrap;gap:18px 28px;color:var(--ink-soft);font-size:14px}
-  .meta strong{color:var(--ink);font-weight:600}
-  h2{font-size:22px;font-weight:700;margin:48px 0 18px;letter-spacing:-.005em}
-  h2 .num{display:inline-block;width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;font-size:14px;line-height:30px;text-align:center;margin-right:12px;vertical-align:2px}
-  p{margin-bottom:14px;color:var(--ink-soft)}
-  p strong{color:var(--ink)}
-  /* Auf einen Blick */
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:8px 0 4px}
-  .stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px}
-  .stat .label{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-soft);font-weight:600;margin-bottom:6px}
-  .stat .value{font-size:26px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
-  .stat .sub{font-size:12px;color:var(--ink-soft);margin-top:4px}
-  @media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
-  /* Cards */
-  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:6px}
-  @media(max-width:640px){.cards{grid-template-columns:1fr}}
-  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 22px 20px;position:relative}
-  .card .tag{display:inline-block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:4px 10px;border-radius:999px;margin-bottom:12px}
-  .card.good .tag{background:var(--good-soft);color:var(--good)}
-  .card.work .tag{background:var(--warn-soft);color:var(--warn)}
-  .card h3{font-size:17px;font-weight:600;margin-bottom:8px;color:var(--ink)}
-  .card p{font-size:15px;color:var(--ink-soft);margin-bottom:0}
-  /* Plan / Timeline */
-  .plan{background:#fff;border:1px solid var(--line);border-radius:14px;padding:8px 28px;margin-top:6px}
-  .step{display:grid;grid-template-columns:120px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--line)}
-  .step:last-child{border-bottom:0}
-  .step .when{font-size:13px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;padding-top:2px}
-  .step .what h4{font-size:16px;font-weight:600;margin-bottom:4px;color:var(--ink)}
-  .step .what p{font-size:15px;color:var(--ink-soft);margin:0}
-  /* Outlook */
-  .outlook{background:var(--accent-soft);border:1px solid #cfe1dc;border-radius:14px;padding:26px 28px;margin-top:18px}
-  .outlook h3{font-size:18px;font-weight:600;margin-bottom:8px;color:var(--ink)}
-  .outlook p{color:var(--ink-soft);font-size:15px;margin:0}
-  /* Footer */
-  footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:var(--ink-soft);display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
-  footer strong{color:var(--ink)}
-  .signature{margin-top:30px}
-  .signature p{margin-bottom:4px}
-  .signature .name{font-weight:600;color:var(--ink)}
-  ul.notes{list-style:none;padding:0;margin-top:6px}
-  ul.notes li{position:relative;padding-left:22px;font-size:15px;color:var(--ink-soft);margin-bottom:8px}
-  ul.notes li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
-  .quote{font-size:15px;color:var(--ink-soft);font-style:italic;border-left:3px solid var(--accent);padding:6px 0 6px 16px;margin:14px 0}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Long Covid &amp; Post-Vac ganzheitlich behandeln | Praxis Emrich</title>
+  <meta name="description" content="Ganzheitliche Begleitung bei Long Covid &amp; Post-Vac. Ursachen erkennen, Symptome lindern und den Körper nachhaltig stärken – Praxis Emrich in Reutlingen." />
+  <meta name="keywords" content="Long Covid Behandlung, Post Vac Syndrom, Post Vac Behandlung, Long Covid Symptome, Long Covid Therapie, ganzheitliche Medizin, funktionelle Medizin, Gesundheitspraxis Emrich" />
+  <meta property="og:title" content="Long Covid &amp; Post-Vac ganzheitlich behandeln | Praxis Emrich" />
+  <meta property="og:description" content="Ganzheitliche Begleitung bei Long Covid &amp; Post-Vac. Ursachen erkennen, Symptome lindern und den Körper nachhaltig stärken – Praxis Emrich in Reutlingen." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://emrich-gesundheitspraxis.de/" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<div class="wrap">
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
-  <header>
-    <span class="eyebrow">Statusupdate · April 2026</span>
-    <h1>Google Ads für die Gesundheitspraxis Emrich</h1>
-    <p class="lede">Wo wir nach den ersten Wochen Laufzeit stehen — und wie wir die Kampagne auf das nächste Level heben.</p>
-    <div class="meta">
-      <span><strong>Berichtszeitraum:</strong> 28. März – 26. April 2026</span>
-      <span><strong>Monatsbudget:</strong> 1.000 €</span>
-      <span><strong>Kampagnen aktiv:</strong> 2 (Suchnetzwerk)</span>
-    </div>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="nav__logo" href="index.html" aria-label="EMRICH Gesundheitspraxis Startseite">
+        <img class="nav__logo-img" src="images/logo.png" alt="EMRICH Gesundheitspraxis" />
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#konzept">Unser Konzept</a></li>
+        <li><a href="#therapie">Die Therapie</a></li>
+        <li><a href="#patienten">Erfahrungen</a></li>
+        <li><a href="#ueber-uns">Über uns</a></li>
+        <li class="nav__links-cta"><a class="btn" href="anfrage.html">Informationsgespräch vereinbaren</a></li>
+      </ul>
+      <a class="btn nav__cta" href="anfrage.html">Informationsgespräch vereinbaren</a>
+      <button class="nav__burger" id="burger" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+    </nav>
   </header>
 
-  <h2><span class="num">1</span>Auf einen Blick</h2>
-  <p>Die Anzeigen waren in den letzten 30 Tagen sehr präsent in den relevanten Google-Suchen. Reichweite, Klickqualität und Sichtbarkeit der Praxis liegen über dem Branchenschnitt im Healthcare-Bereich.</p>
-  <div class="stats">
-    <div class="stat">
-      <div class="label">Sichtbarkeit</div>
-      <div class="value">4.535</div>
-      <div class="sub">Impressionen bei Google</div>
-    </div>
-    <div class="stat">
-      <div class="label">Klicks auf die Praxis</div>
-      <div class="value">422</div>
-      <div class="sub">qualifizierte Besucher</div>
-    </div>
-    <div class="stat">
-      <div class="label">Klickrate (CTR)</div>
-      <div class="value">9,3 %</div>
-      <div class="sub">~2× Branchenschnitt</div>
-    </div>
-    <div class="stat">
-      <div class="label">Klickkosten Ø</div>
-      <div class="value">2,35 €</div>
-      <div class="sub">fairer Healthcare-Wert</div>
-    </div>
-  </div>
+  <main id="main">
 
-  <h2><span class="num">2</span>Was richtig gut funktioniert</h2>
-  <p>Die strategische Basis steht stabil. Folgende Stärken haben sich in den ersten Wochen klar gezeigt:</p>
-  <div class="cards">
-    <div class="card good">
-      <span class="tag">Stärke</span>
-      <h3>Hochrelevante Suchanfragen</h3>
-      <p>Die Anzeigen erreichen genau die Menschen, die aktiv nach Hilfe bei Long Covid, Post Covid und Spike-Protein-Beschwerden suchen — keine Streuverluste.</p>
-    </div>
-    <div class="card good">
-      <span class="tag">Stärke</span>
-      <h3>Überdurchschnittliche Klickrate</h3>
-      <p>9,3 % der Menschen, die die Anzeige sehen, klicken. Das liegt deutlich über dem Healthcare-Durchschnitt und zeigt: Die Botschaft trifft.</p>
-    </div>
-    <div class="card good">
-      <span class="tag">Stärke</span>
-      <h3>Saubere Kampagnen-Struktur</h3>
-      <p>Zwei Kampagnen mit klarer Geo-Logik (Region & überregional) — passend zu deiner Spezialisierung, weil Patienten für seltene Spezialisten anreisen.</p>
-    </div>
-    <div class="card good">
-      <span class="tag">Stärke</span>
-      <h3>Anzeigen vollständig freigegeben</h3>
-      <p>Alle Anzeigen sind durch die strenge Healthcare-Werbeprüfung von Google gekommen und werden uneingeschränkt ausgeliefert.</p>
-    </div>
-  </div>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <img class="hero__bg" src="https://d8j0ntlcm91z4.cloudfront.net/user_39bpvnosVvqwhbus3q5PhClCw2s/hf_20260606_203814_5f9f6577-a394-430d-9519-8b71bd64ee18.png" alt="" aria-hidden="true" onerror="this.style.display='none'">
+      <div class="deco" data-parallax="0.2" style="top:-130px;right:-90px;" aria-hidden="true"><span class="enso enso--lg" style="transform:rotate(-45deg)"></span></div>
+      <div class="deco" data-parallax="-0.14" style="bottom:-150px;left:-90px;" aria-hidden="true"><span class="enso enso--md" style="transform:rotate(135deg)"></span></div>
+      <div class="container hero__grid">
+        <div>
+          <span class="badge">Gesundheitspraxis Emrich in <b>Reutlingen</b></span>
+          <h1>Long Covid &amp;<br />Post-Vac effektiv behandeln lassen.</h1>
+          <p class="hero__sub">Fast jeder Zweite leidet an Long-Covid / Post-Vac.</p>
+          <p>Mit unserem <strong>Cell Reset Konzept</strong> begleiten wir dich auf deinem Weg und gehen deinen Beschwerden auf den Grund.</p>
+          <div class="hero__actions">
+            <a class="btn" href="anfrage.html">Informationsgespräch vereinbaren<small>– Telefonisches 15min Gespräch –</small></a>
+            <a class="btn btn--outline" href="#konzept">Die Therapie</a>
+          </div>
+        </div>
+        <div class="hero__img">
+          <div class="ph" style="--ar: 16 / 9;">
+            <img src="images/hero-team.jpg" alt="Tobias Emrich mit Kollegin in der Gesundheitspraxis" loading="lazy" onerror="this.style.display='none'">
+            <div class="ph__note"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5L5 20"/></svg><span class="ph__label">Hero · Team / Praxis</span><span class="ph__dim">empf. 1280 × 720 px · 16:9 · JPG</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <h2><span class="num">3</span>Wo wir nachschärfen</h2>
-  <p>Bei einem ehrlichen Audit zeigt sich: Die Sichtbarkeit ist ausgezeichnet, aber der Schritt vom Klick zur Anfrage wird derzeit technisch nicht sauber gemessen. Konkret:</p>
-  <div class="cards">
-    <div class="card work">
-      <span class="tag">Optimierungsbedarf</span>
-      <h3>Conversion-Messung neu kalibrieren</h3>
-      <p>Die technische Verbindung zwischen dem Anfrageformular auf der Website und Google Ads liefert aktuell keine Rückmeldung mehr. Das heißt: Selbst wenn Anfragen reinkommen, „sieht" Google sie nicht — und kann das Bidding nicht optimieren.</p>
-    </div>
-    <div class="card work">
-      <span class="tag">Feinschliff</span>
-      <h3>Anzeigentexte schärfer auf die Nische</h3>
-      <p>Die aktuellen Anzeigen funktionieren gut, lassen sich aber gezielter auf Long-Covid-/Post-Vac-Sucher ausrichten — mit Botschaften, die sofort Vertrauen aufbauen und das Spezialgebiet klar herausstellen.</p>
-    </div>
-  </div>
-  <p style="margin-top:18px"><strong>Zur Einordnung:</strong> Das Tracking-Setup, das wir bei anderen Praxis-Kunden ähnlich einsetzen, liefert dort verlässliche Conversion-Signale. Wir gehen davon aus, dass hier eine Detail-Konfiguration nachgezogen werden muss — ein klar lösbares technisches Thema, kein strategischer Fehler.</p>
+    <!-- ============ VERTRAUENS-/ZAHLEN-LEISTE ============ -->
+    <section class="stats">
+      <div class="container stats__grid">
+        <div class="stat">
+          <span class="stat__num" data-count="100" data-suffix="%">0</span>
+          <span class="stat__label">individuelle Behandlung</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="15" data-suffix="+">0</span>
+          <span class="stat__label">Jahre Erfahrung</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">3<span style="font-size:.6em;"> in 1</span></span>
+          <span class="stat__label">Physiotherapie · Osteopathie · Heilpraktik</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">DACH</span>
+          <span class="stat__label">Patienten aus Deutschland, Österreich &amp; der Schweiz</span>
+        </div>
+      </div>
+    </section>
 
-  <h2><span class="num">4</span>Unser Plan für die nächsten Tage</h2>
-  <p>Wir nutzen jetzt eine kurze, kontrollierte Optimierungspause, um die Kampagne auf ein technisch sauberes und strategisch geschärftes Fundament zu stellen — bevor wir das Budget weiterlaufen lassen.</p>
-  <div class="plan">
-    <div class="step">
-      <div class="when">Heute</div>
-      <div class="what">
-        <h4>Kampagnen werden pausiert</h4>
-        <p>Wir stoppen die Anzeigen-Auslieferung temporär, damit kein Budget in eine technisch nicht messbare Phase fließt. Die Pause ist bewusst kurz angesetzt.</p>
+    <!-- ============ INTRO / DIAGNOSE ============ -->
+    <section class="section" id="konzept">
+      <div class="deco" data-parallax="0.38" style="top:-50px;left:-60px;" aria-hidden="true"><span class="disc" style="width:240px;height:240px;"></span></div>
+      <div class="deco" data-parallax="-0.34" style="top:38%;right:-80px;" aria-hidden="true"><span class="disc" style="width:190px;height:190px;"></span></div>
+      <div class="container h-center" style="max-width:760px;margin-bottom:60px;">
+        <h2 style="font-size:clamp(28px,3.6vw,42px);margin-bottom:18px;">Dort anfangen,<br />wo Medizin an Grenzen stößt.</h2>
+        <p class="lead" style="font-weight:600;color:var(--navy);">Hast du anhaltende Beschwerden nach einer Covid-Impfung oder Covid Erkrankung?</p>
+        <p class="lead" style="margin-top:14px;">Long Covid oder Post Vac beeinträchtigt das tägliche Leben erheblich und erfordert spezialisierte Aufmerksamkeit und Behandlung.</p>
+      </div>
+
+      <div class="container">
+        <div class="card-block">
+          <div>
+            <div class="video-embed">
+              <iframe src="https://www.youtube-nocookie.com/embed/Unt1GJyryzc" title="Video von Tobias Emrich zum Thema Long Covid" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p class="lead" style="margin-top:12px;font-size:14px;">Video von Tobias Emrich zum Thema Long Covid · 09:13 min</p>
+          </div>
+          <div>
+            <h2>Long Covid und Post-Vac richtig diagnostizieren</h2>
+            <p class="lead">Wir sehen, dass Covid- und impfinduzierte Erkrankungen massiv zunehmen. Fast jeder zweite ist betroffen.</p>
+            <p class="lead" style="margin-top:14px;">Mit unserem Konzept werden die richtigen Diagnosen gestellt sowie eine individuell abgestimmte Therapie geboten.</p>
+            <a class="btn" href="anfrage.html" style="margin-top:24px;">Informationsgespräch vereinbaren</a>
+          </div>
+        </div>
+
+        <div class="h-center" style="margin-top:70px;max-width:760px;margin-left:auto;margin-right:auto;">
+          <p class="eyebrow">Was dich bei uns erwartet</p>
+          <h3 style="font-size:clamp(24px,3vw,34px);color:var(--navy);">Mehr als nur Symptombehandlung</h3>
+        </div>
+
+        <div class="bento">
+          <div class="bento__card">
+            <div class="bento__head">
+              <span class="bento__tag">Diagnostik</span>
+              <svg class="bento__icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="20.5" y1="20.5" x2="16.65" y2="16.65"/><path d="M11 8v6M8 11h6"/></svg>
+            </div>
+            <h3 class="bento__title">Tiefgehende Ursachen-Diagnostik</h3>
+            <p class="bento__text">Wir messen, statt zu raten: eine umfassende Diagnostik macht sichtbar, wo dein Körper wirklich aus dem Gleichgewicht geraten ist.</p>
+          </div>
+          <div class="bento__card">
+            <div class="bento__head">
+              <span class="bento__tag">Konzept</span>
+              <svg class="bento__icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 1 8.5 6"/><path d="M21 3v6h-6"/><path d="M12 21a9 9 0 0 1-8.5-6"/><path d="M3 21v-6h6"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3 class="bento__title">Ganzheitliches Cell Reset Konzept</h3>
+            <p class="bento__text">Ein Multi-System-Ansatz, der die Wurzel deiner Beschwerden behandelt – nicht nur einzelne Symptome.</p>
+          </div>
+        </div>
+
+        <div class="bento bento--bottom">
+          <div class="bento__card">
+            <div class="bento__head">
+              <span class="bento__tag">Ergebnis</span>
+              <svg class="bento__icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16l5-6 4 3 6-8"/><path d="M16 5h4v4"/></svg>
+            </div>
+            <h3 class="bento__title">Messbar &amp; nachhaltig</h3>
+            <p class="bento__text">Fortschritte, die sich überprüfen lassen und langfristig wirken.</p>
+          </div>
+          <div class="bento__card">
+            <div class="bento__head">
+              <span class="bento__tag">Begleitung</span>
+              <svg class="bento__icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg>
+            </div>
+            <h3 class="bento__title">Persönlich &amp; ernst genommen</h3>
+            <p class="bento__text">Wir nehmen uns Zeit, hören zu und begleiten dich individuell.</p>
+          </div>
+          <div class="bento__card">
+            <div class="bento__head">
+              <span class="bento__tag">Erfahrung</span>
+              <svg class="bento__icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M8.5 13l-1.5 8 5-3 5 3-1.5-8"/></svg>
+            </div>
+            <h3 class="bento__title">15+ Jahre Erfahrung</h3>
+            <p class="bento__text">Physiotherapie, Osteopathie &amp; Heilpraktik – vereint in einer Hand.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="cta-band">
+      <img class="cta-band__bg" src="https://d8j0ntlcm91z4.cloudfront.net/user_39bpvnosVvqwhbus3q5PhClCw2s/hf_20260606_160456_042ffd92-26e2-49f3-832f-23fe50cd1027.png" alt="" aria-hidden="true" onerror="this.style.display='none'">
+      <div class="container cta-band__inner">
+        <span class="cta-band__eyebrow">Dein erster Schritt</span>
+        <h2 class="cta-band__title">Bereit, deinen Beschwerden <span>auf den Grund zu gehen?</span></h2>
+        <p class="cta-band__sub">Bei uns bekommst du die Antworten, die du verdienst – in einem kostenlosen, telefonischen 15-Minuten-Gespräch, unverbindlich und persönlich.</p>
+        <a class="btn-cta" href="anfrage.html">Informationsgespräch vereinbaren <span class="btn-cta__arrow" aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <!-- ============ FEHLDIAGNOSE ============ -->
+    <section class="section">
+      <div class="container h-center" style="max-width:900px;">
+        <h2 style="font-size:clamp(28px,3.6vw,44px);">Post-Vac und Long-Covid werden häufig unterschätzt oder <span style="border-bottom:4px solid var(--red);">fehldiagnostiziert</span>.</h2>
+      </div>
+      <div class="container" style="margin-top:50px;">
+        <div class="misdiag">
+          <div class="expertise__img">
+            <div class="ph" style="--ar: 4 / 5;">
+              <img src="https://d8j0ntlcm91z4.cloudfront.net/user_39bpvnosVvqwhbus3q5PhClCw2s/hf_20260606_154109_11815a1a-55a2-4d79-93a9-a05e9bfe69a8.png" alt="Erschöpfter Patient (Symbolbild)" loading="lazy" onerror="this.style.display='none'">
+              <div class="ph__note"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5L5 20"/></svg><span class="ph__label">Symbolbild · Erschöpfung</span><span class="ph__dim">empf. 1000 × 1250 px · 4:5 · JPG</span></div>
+            </div>
+          </div>
+          <div class="misdiag__text">
+            <p>Durch jahrelange Praxiserfahrung und die Begleitung vieler Post-Vac- und Long-Covid-Patienten ist es uns gelungen, ein zielführendes und plausibles Behandlungskonzept zu erstellen.</p>
+            <p class="misdiag__highlight">Seit Tag 1 ist uns die Dringlichkeit bewusst, die dieser lebensverändernde Einschnitt mit sich bringt:</p>
+            <p>Vielen ist es unmöglich, nach der Impfung oder Infektion symptomfrei in ihren Alltag zurückzukehren. Meistens beginnt dort die Abwärtsspirale, und der Gesundheitszustand verschlimmert sich stetig.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WAS IST POST-VAC / SYMPTOME ============ -->
+    <section class="section--tight container">
+      <div class="sci-card">
+        <div class="sci-card__text">
+          <h2 style="font-size:clamp(26px,3.4vw,40px);">Was ist Post-Vac und Long-Covid?</h2>
+          <p class="lead" style="margin-top:16px;">Das Krankheitsbild ist komplex. Betroffen sind multiple Organsysteme. Daraus resultierende Symptome können mannigfaltig sein.</p>
+        </div>
+        <div class="sci-card__media">
+          <img src="https://d8j0ntlcm91z4.cloudfront.net/user_39bpvnosVvqwhbus3q5PhClCw2s/hf_20260606_203816_0b1084dc-72e3-444d-801a-0bf557cf8294.png" alt="Coronavirus mit Spike-Proteinen und Antikörpern" loading="lazy" onerror="this.style.display='none'">
+        </div>
+      </div>
+      <div class="h-center" style="max-width:780px;margin:50px auto 0;">
+        <h3 style="font-size:24px;">Regelmäßig berichten uns Menschen über:</h3>
+      </div>
+      <div class="sympt-grid">
+        <div class="sympt-card">
+          <div class="icon" aria-hidden="true">👤</div>
+          <h3>Physische Beschwerden:</h3>
+          <ul>
+            <li>Schwere Erschöpfung und körperliche Leistungseinbußen</li>
+            <li>Herzrasen</li>
+            <li>Unkontrollierte Blutdruckentgleisungen</li>
+            <li>Atemnot</li>
+            <li>Zittrigkeit</li>
+            <li>Vermindertes Hör- und Sehvermögen</li>
+            <li>Infektanfälligkeit und permanentes Krankheitsgefühl</li>
+          </ul>
+        </div>
+        <div class="sympt-card">
+          <div class="icon" aria-hidden="true">🧠</div>
+          <h3>Kognitive und neurologische Beschwerden:</h3>
+          <ul>
+            <li>Konzentrationsschwierigkeiten und Hirn-Nebel</li>
+            <li>Missempfindungen</li>
+            <li>Schwindel</li>
+            <li>Migräne und Kopfschmerzen</li>
+            <li>Plötzlich auftretende Nahrungsmittelunverträglichkeiten</li>
+            <li>Verdauungsbeschwerden</li>
+          </ul>
+        </div>
+        <div class="sympt-card">
+          <div class="icon" aria-hidden="true">💭</div>
+          <h3>Psychische Beschwerden:</h3>
+          <ul>
+            <li>Ängste</li>
+            <li>Depressionen</li>
+            <li>Unruhezustände bis hin zu Panikattacken</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ URSACHEN-BAUM ============ -->
+    <section class="tree-sec">
+      <div class="container h-center">
+        <p class="eyebrow">Ursachenmedizin</p>
+        <h2 style="font-size:clamp(28px,3.6vw,44px);color:#fff;">Wir gehen der Ursache auf den Grund</h2>
+        <p class="lead" style="max-width:680px;margin:14px auto 0;">Sichtbare Symptome sind nur die Spitze. Wir behandeln nicht das Blatt, sondern die Wurzel.</p>
+        <div class="tree reveal">
+          <div class="tree__soilbg" aria-hidden="true">
+            <svg class="tree__soilwave" viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0 48 Q720 4 1440 48 L1440 80 L0 80 Z" fill="#03182e" /><path d="M0 48 Q720 4 1440 48" fill="none" stroke="rgba(174,155,105,.35)" stroke-width="2" /></svg>
+            <div class="tree__soilfill"></div>
+          </div>
+          <svg viewBox="0 0 1000 940" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Baum-Grafik: oben die sichtbaren Symptome, unten in den Wurzeln die zugrunde liegenden Ursachen.">
+            <defs><linearGradient id="trunkGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgba(255,255,255,0.12)" /><stop offset="1" stop-color="rgba(255,255,255,0.26)" /></linearGradient></defs>
+            <text class="tree__axis" x="500" y="42" text-anchor="middle">SYMPTOME</text>
+            <ellipse class="tree__crown" cx="500" cy="255" rx="340" ry="215" />
+            <ellipse class="tree__crown" cx="365" cy="265" rx="165" ry="150" />
+            <ellipse class="tree__crown" cx="645" cy="265" rx="158" ry="148" />
+            <path class="tree__trunk-fill" d="M458 590 C 470 510 484 440 489 334 L 511 334 C 516 440 530 510 542 590 Z" />
+            <path class="tree__line tree__branch" pathLength="1" d="M500 330 C 470 252 430 196 360 154" />
+            <path class="tree__line tree__branch" pathLength="1" d="M499 382 C 455 324 388 270 314 239" />
+            <path class="tree__line tree__branch" pathLength="1" d="M498 432 C 448 394 378 352 304 324" />
+            <path class="tree__line tree__branch" pathLength="1" d="M499 468 C 458 442 418 416 364 399" />
+            <path class="tree__line tree__branch" pathLength="1" d="M500 330 C 530 252 570 196 640 154" />
+            <path class="tree__line tree__branch" pathLength="1" d="M501 382 C 545 324 614 270 688 239" />
+            <path class="tree__line tree__branch" pathLength="1" d="M502 432 C 552 394 616 352 678 324" />
+            <path class="tree__line tree__twig" pathLength="1" d="M500 352 C 486 320 466 302 446 288" />
+            <path class="tree__line tree__twig" pathLength="1" d="M500 352 C 514 320 534 302 554 288" />
+            <path class="tree__line tree__twig" pathLength="1" d="M500 300 L500 248" />
+            <path class="tree__line tree__branch" pathLength="1" d="M500 585 C 470 612 430 632 384 650" />
+            <path class="tree__line tree__branch" pathLength="1" d="M500 588 C 458 638 400 678 340 702" />
+            <path class="tree__line tree__branch" pathLength="1" d="M500 590 C 452 658 378 720 328 766" />
+            <path class="tree__line tree__branch" pathLength="1" d="M500 592 C 466 688 420 778 398 818" />
+            <path class="tree__line tree__branch" pathLength="1" d="M500 592 C 494 718 484 800 481 860" />
+            <path class="tree__line tree__branch" pathLength="1" d="M500 585 C 530 612 580 632 638 650" />
+            <path class="tree__line tree__branch" pathLength="1" d="M500 588 C 542 638 610 678 666 702" />
+            <path class="tree__line tree__branch" pathLength="1" d="M500 590 C 548 658 616 720 654 766" />
+            <path class="tree__line tree__branch" pathLength="1" d="M500 592 C 530 700 564 772 588 814" />
+            <text class="tree__axis" x="500" y="924" text-anchor="middle">URSACHEN</text>
+            <g class="tree__pt" style="--d:1.40s"><circle class="tree__ring" cx="360" cy="154" r="14" /><text class="tree__lbl" x="336" y="161" text-anchor="end">Verdauungsstörung</text></g>
+            <g class="tree__pt" style="--d:1.48s"><circle class="tree__ring" cx="640" cy="154" r="14" /><text class="tree__lbl" x="664" y="161" text-anchor="start">Depressionen</text></g>
+            <g class="tree__pt" style="--d:1.56s"><circle class="tree__ring" cx="314" cy="239" r="14" /><text class="tree__lbl" x="290" y="246" text-anchor="end">Schmerzen</text></g>
+            <g class="tree__pt" style="--d:1.64s"><circle class="tree__ring" cx="688" cy="239" r="14" /><text class="tree__lbl" x="712" y="246" text-anchor="start">Burnout</text></g>
+            <g class="tree__pt" style="--d:1.72s"><circle class="tree__ring" cx="304" cy="324" r="14" /><text class="tree__lbl" x="280" y="331" text-anchor="end">Müdigkeit</text></g>
+            <g class="tree__pt" style="--d:1.80s"><circle class="tree__ring" cx="678" cy="324" r="14" /><text class="tree__lbl" x="702" y="331" text-anchor="start">Allergien</text></g>
+            <g class="tree__pt" style="--d:1.88s"><circle class="tree__ring" cx="364" cy="399" r="14" /><text class="tree__lbl" x="340" y="406" text-anchor="end">Krebs</text></g>
+            <g class="tree__pt" style="--d:1.96s"><circle class="tree__ring" cx="384" cy="650" r="14" /><text class="tree__lbl" x="360" y="657" text-anchor="end">Umweltbelastungen</text></g>
+            <g class="tree__pt" style="--d:2.04s"><circle class="tree__ring" cx="638" cy="650" r="14" /><text class="tree__lbl" x="662" y="657" text-anchor="start">Mineralstoffmängel</text></g>
+            <g class="tree__pt" style="--d:2.12s"><circle class="tree__ring" cx="340" cy="702" r="14" /><text class="tree__lbl" x="316" y="709" text-anchor="end">Medikamente</text></g>
+            <g class="tree__pt" style="--d:2.20s"><circle class="tree__ring" cx="666" cy="702" r="14" /><text class="tree__lbl" x="690" y="709" text-anchor="start">Fehlernährung</text></g>
+            <g class="tree__pt" style="--d:2.28s"><circle class="tree__ring" cx="328" cy="766" r="14" /><text class="tree__lbl" x="304" y="773" text-anchor="end">Zahnmaterialien</text></g>
+            <g class="tree__pt" style="--d:2.36s"><circle class="tree__ring" cx="654" cy="766" r="14" /><text class="tree__lbl" x="678" y="773" text-anchor="start">Allergene</text></g>
+            <g class="tree__pt" style="--d:2.44s"><circle class="tree__ring" cx="398" cy="818" r="14" /><text class="tree__lbl" x="374" y="825" text-anchor="end">Toxine</text></g>
+            <g class="tree__pt" style="--d:2.52s"><circle class="tree__ring" cx="588" cy="814" r="14" /><text class="tree__lbl" x="612" y="821" text-anchor="start">Bakterien</text></g>
+            <g class="tree__pt" style="--d:2.60s"><circle class="tree__ring" cx="481" cy="860" r="14" /><text class="tree__lbl" x="457" y="867" text-anchor="end">Stress</text></g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERTISE / ACCORDION ============ -->
+    <section class="section container">
+      <div class="expertise">
+        <div class="expertise__img">
+          <div class="ph" style="--ar: 4 / 5;">
+            <img src="images/tobias-portrait.jpg" alt="Tobias Emrich" loading="lazy" onerror="this.style.display='none'">
+            <div class="ph__note"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5L5 20"/></svg><span class="ph__label">Porträt · Tobias Emrich</span><span class="ph__dim">empf. 1000 × 1250 px · 4:5 · JPG</span></div>
+          </div>
+        </div>
+        <div>
+          <h2>Post-Vac und<br />Long-Covid Expertise:</h2>
+          <div class="accordion">
+            <div class="acc-item">
+              <button class="acc-head">1. Akute Symptomatik</button>
+              <div class="acc-body"><p>Durch eine Infektion oder Impfung gelangen die Spike-Proteine in den gesamten Organismus. Dort können diese in allen Bereichen zu gravierenden Beschwerden führen. Durch das ständige Reproduzieren der Spike-Proteine in den Zellen entstehen chronische Entzündungen, welche die Gefäße, Neuronen oder alle Organe angreifen können. Nach der Corona-Infektion hingegen kommt es häufig zu Beschwerden der Schleimhäute im Darm und im Mund-Rachen-Raum, der Atemwege und in schwierigen Fällen sogar der Organe.</p></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-head">2. Chronische Erkrankungen</button>
+              <div class="acc-body"><p>Post-Vac und Long-Covid begünstigen chronifizierte Beschwerden, die unbehandelt zu Autoimmunkrankheiten führen können. Dies kann jegliche Organstrukturen befallen; bei Post-Vac und Long-Covid sind jedoch häufig Neuronen und Gefäße betroffen. Genetische Veranlagungen, Umweltgifte, Schwermetalle sowie persistierende Viren und Bakterien verschlimmern die Entzündungen und schwächen das Immunsystem zusätzlich.</p></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-head">3. Toxische Wirkung des Spike-Proteins</button>
+              <div class="acc-body"><p>Die Spike-Protein-Belastung kann zu einer übermäßigen Aktivierung des Immunsystems führen. Häufige Folgen sind z.B. Endotheliitis, Zerstörung der Zellkraftwerke (Mitochondrien) und Schädigung der Blut-Hirn-Schranke.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sci-card" style="margin-top:46px;">
+        <div class="sci-card__text">
+          <h2 style="font-size:clamp(24px,3vw,36px);">Heilung beginnt in der Zelle</h2>
+          <p class="lead" style="margin-top:16px;">Long Covid und Post-Vac wirken bis tief in die Zellen – sie stören Mitochondrien, Energieproduktion und Immunregulation. Genau dort setzt unser Cell Reset Konzept an: Wir schaffen die Bedingungen, unter denen sich deine Zellen wieder regenerieren können.</p>
+        </div>
+        <div class="sci-card__media">
+          <img src="https://d8j0ntlcm91z4.cloudfront.net/user_39bpvnosVvqwhbus3q5PhClCw2s/hf_20260606_203817_cbef0d74-270d-4367-8688-986c961edb40.png" alt="Zellen und Mitochondrien – Behandlung auf Zellebene" loading="lazy" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VERGLEICH: WARUM ANDERE BEHANDLUNGEN SCHEITERN ============ -->
+    <section class="section container">
+      <div class="h-center" style="max-width:820px;margin:0 auto;">
+        <h2 style="font-size:clamp(28px,3.6vw,42px);">Warum die meisten Behandlungen bei Long-Covid &amp; Post-Vac scheitern</h2>
+        <p class="lead" style="margin-top:16px;">Du hast wahrscheinlich schon einiges versucht – und trotzdem keine echte Besserung erlebt. Das liegt selten an dir. Es liegt am Ansatz.</p>
+      </div>
+      <div class="vs-grid">
+        <div class="vs-col vs-col--bad">
+          <div class="vs-col__head">Die klassische 5-Minuten-Medizin</div>
+          <ul>
+            <li>Das Standard-Blutbild ist „unauffällig" – und du wirst nicht ernst genommen.</li>
+            <li>Es wird nur an Symptomen herumbehandelt, nie an der Ursache.</li>
+            <li>Du rennst von Arzt zu Arzt, ohne klare Antworten zu bekommen.</li>
+            <li>Einzeltherapien, die das komplexe Beschwerdebild nicht erfassen.</li>
+            <li>Das Gefühl, mit deinen Beschwerden allein gelassen zu werden.</li>
+          </ul>
+        </div>
+        <div class="vs-col vs-col--good">
+          <div class="vs-col__head">Das Cell Reset Konzept</div>
+          <ul>
+            <li>Eine tiefgehende Diagnostik, die die wahren Ursachen sichtbar macht.</li>
+            <li>Wir behandeln die Wurzel deiner Beschwerden – nicht nur die Symptome.</li>
+            <li>Ein klarer, individueller Plan statt Rätselraten und Vertrösten.</li>
+            <li>Ein ganzheitlicher Multi-System-Ansatz statt isolierter Einzelanwendung.</li>
+            <li>Du wirst gehört, ernst genommen und auf deinem Weg begleitet.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ METHODE (GOLD) ============ -->
+    <section class="solution" id="therapie">
+      <div class="container h-center">
+        <p class="eyebrow">Die Therapie</p>
+        <h2>"Cell Reset Methode"</h2>
+        <p class="lead" style="max-width:740px;margin:18px auto 0;">In unserer Heilpraktikerpraxis in Reutlingen, Emrich Gesundheitspraxis, setzen wir auf eine individuelle und umfassende Behandlung von Long Covid &amp; Post Vac-Syndrom.</p>
+
+        <!-- ===== Animierte Cell-Reset-Grafik ===== -->
+        <div class="cr reveal" role="img" aria-label="Das Cell Reset Konzept in fünf Phasen: Verstehen, Entlasten, Regenerieren, Stärken und Stabilisieren – mit den Mitochondrien im Fokus.">
+          <div class="cr__head">
+            <span class="cr__kicker">Das Konzept</span>
+            <p class="cr__tagline">Gesundheit durch die richtigen Bedingungen auf Zellebene</p>
+          </div>
+
+          <div class="cr__stage">
+            <svg class="cr__svg" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <defs>
+                <linearGradient id="crGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#ae9b69" />
+                  <stop offset="1" stop-color="#042d5f" />
+                </linearGradient>
+              </defs>
+              <g class="cr__lines" stroke="url(#crGrad)" stroke-width="2.5" fill="none" stroke-linecap="round">
+                <line pathLength="1" x1="300" y1="300" x2="300" y2="85" />
+                <line pathLength="1" x1="300" y1="300" x2="504.4" y2="233.6" />
+                <line pathLength="1" x1="300" y1="300" x2="426.4" y2="473.9" />
+                <line pathLength="1" x1="300" y1="300" x2="173.6" y2="473.9" />
+                <line pathLength="1" x1="300" y1="300" x2="95.6" y2="233.6" />
+              </g>
+              <circle class="cr__orbit" cx="300" cy="300" r="215" fill="none" stroke="url(#crGrad)" stroke-width="3" stroke-dasharray="2 14" stroke-linecap="round" />
+            </svg>
+
+            <div class="cr__core">
+              <span class="cr__halo" aria-hidden="true"></span>
+              <span class="cr__disc">
+                <svg class="cr__recycle" viewBox="0 0 24 24" fill="none" stroke="#ae9b69" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 3a9 9 0 0 1 8.5 6" /><path d="M21 4v5h-5" />
+                  <path d="M12 21a9 9 0 0 1-8.5-6" /><path d="M3 20v-5h5" />
+                </svg>
+                <span class="cr__core-title">Cell Reset</span>
+                <span class="cr__core-sub">Konzept</span>
+              </span>
+            </div>
+
+            <div class="cr__node" style="--x:50%;--y:14.2%;">
+              <span class="cr__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg></span>
+              <span class="cr__text"><span class="cr__label">Verstehen</span><span class="cr__sub">Ursachen erkennen</span></span>
+            </div>
+            <div class="cr__node" style="--x:84.1%;--y:38.9%;">
+              <span class="cr__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h18l-7 8v6l-4 2v-8z" /></svg></span>
+              <span class="cr__text"><span class="cr__label">Entlasten</span><span class="cr__sub">Auslöser reduzieren</span></span>
+            </div>
+            <div class="cr__node" style="--x:71.1%;--y:79%;">
+              <span class="cr__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 1 8.5 6" /><path d="M21 4v5h-5" /><path d="M12 21a9 9 0 0 1-8.5-6" /><path d="M3 20v-5h5" /></svg></span>
+              <span class="cr__text"><span class="cr__label">Regenerieren</span><span class="cr__sub">Zellen erneuern und entgiften</span></span>
+            </div>
+            <div class="cr__node" style="--x:28.9%;--y:79%;">
+              <span class="cr__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" /><path d="M9 12l2 2 4-4" /></svg></span>
+              <span class="cr__text"><span class="cr__label">Stärken</span><span class="cr__sub">Belastbarkeit erhöhen</span></span>
+            </div>
+            <div class="cr__node" style="--x:15.9%;--y:38.9%;">
+              <span class="cr__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7" /><path d="M5 10v10h14V10" /><path d="M10 20v-6h4v6" /></svg></span>
+              <span class="cr__text"><span class="cr__label">Stabilisieren</span><span class="cr__sub">Gesundheit im Alltag verankern</span></span>
+            </div>
+          </div>
+
+          <div class="cr__footer">
+            <h3 class="cr__foot-title">Mitochondrien im Fokus</h3>
+            <p class="cr__foot-sub">Optimale Bedingungen für Zellerneuerung und Energieproduktion</p>
+          </div>
+        </div>
+
+        <!-- ===== Unsere Methoden (animiert) ===== -->
+        <div class="methods reveal">
+          <h3 class="methods__title">Unsere Methoden</h3>
+          <div class="methods-grid">
+            <div class="method-pill" style="--c:#e2841b;">
+              <span class="method-pill__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="7" width="8" height="13" rx="2"/><path d="M9 7V5h6v2"/><path d="M8 12h8"/><circle cx="18.5" cy="6" r="2"/></svg>
+              </span>
+              <span class="method-pill__title">Ernährung &amp; Supplements</span>
+              <span class="method-pill__sub">optimale Nährstoffversorgung</span>
+            </div>
+            <div class="method-pill" style="--c:#9dc024;">
+              <span class="method-pill__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="5" r="1.6"/><path d="M5 20l3-4 3 1 1-4 3 3h3"/><path d="M9 9l3-1 3 2"/></svg>
+              </span>
+              <span class="method-pill__title">Bewegung &amp; Atmung</span>
+              <span class="method-pill__sub">die Grundlage des Lebens</span>
+            </div>
+            <div class="method-pill" style="--c:#5da64b;">
+              <span class="method-pill__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5V5M12 14.5V19M9.5 12H5M14.5 12H19M10 10l-3-3M14 10l3-3M10 14l-3 3M14 14l3 3"/></svg>
+              </span>
+              <span class="method-pill__title">Nerven &amp; Muskeln</span>
+              <span class="method-pill__sub">gezielt behandeln &amp; trainieren</span>
+            </div>
+            <div class="method-pill" style="--c:#2a8dae;">
+              <span class="method-pill__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="8" rx="1.5"/><path d="M11 3V2h2v1"/><path d="M12 11v3"/><circle cx="12" cy="16" r="1"/><path d="M12 17v3"/></svg>
+              </span>
+              <span class="method-pill__title">Infusionen</span>
+              <span class="method-pill__sub">direkte molekulare Versorgung</span>
+            </div>
+            <div class="method-pill" style="--c:#155e75;">
+              <span class="method-pill__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="1.6"/><path d="M12 8v5M9 10h6M10 19l2-6 2 6"/><path d="M6 6a8 8 0 0 0-1 4M18 6a8 8 0 0 1 1 4"/></svg>
+              </span>
+              <span class="method-pill__title">Bioenergetische Stimulation</span>
+              <span class="method-pill__sub">Zellkommunikation individuell</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ERSTES GESPRÄCH ============ -->
+    <section class="section container">
+      <div class="h-center" style="max-width:800px;margin:0 auto 40px;">
+        <h2 style="font-size:clamp(28px,3.6vw,44px);">Wie sieht das<br />erste Gespräch bei uns aus?</h2>
+        <p class="lead" style="margin-top:18px;">In diesem Video erklärt dir Tobias Emrich persönlich, wie dein Ersttermin in unserer Praxis abläuft – und welches Ziel dahinter steht.</p>
+      </div>
+
+      <div style="max-width:840px;margin:0 auto;">
+        <div class="video-embed">
+          <iframe src="https://www.youtube-nocookie.com/embed/8oj-spBiYJM" title="Wie läuft das Erstgespräch bei uns ab? – Tobias Emrich" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <p class="video-caption">Tobias Emrich · Gesundheitspraxis Emrich, Reutlingen</p>
+      </div>
+
+      <div class="firstvisit-grid">
+        <div class="fv-card">
+          <span class="fv-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-1z"/></svg></span>
+          <h3>1. Kurzer Anruf</h3>
+          <p>Du rufst bei uns an, schilderst kurz dein Anliegen – und wir vereinbaren deinen Ersttermin.</p>
+        </div>
+        <div class="fv-card">
+          <span class="fv-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <h3>2. 60–90 Minuten Zeit</h3>
+          <p>Wir nehmen uns wirklich Zeit für deinen Ersttermin – ausführlich statt 5-Minuten-Medizin.</p>
+        </div>
+        <div class="fv-card">
+          <span class="fv-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="16" rx="2"/><path d="M9 4V3h6v1"/><path d="M9 10h6M9 14h4"/></svg></span>
+          <h3>3. Anamnesebogen vorab</h3>
+          <p>Den Bogen füllst du in Ruhe zu Hause aus und bringst ihn mit – so verlieren wir keine Zeit.</p>
+        </div>
+        <div class="fv-card">
+          <span class="fv-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></span>
+          <h3>4. Ehrliche Einschätzung</h3>
+          <p>Wir hören zu, klären deine Ziele – und sagen dir offen, ob und wie wir dir helfen können.</p>
+        </div>
+      </div>
+
+      <p class="lead h-center" style="max-width:760px;margin:40px auto 0;">Nach der ausführlichen Anamnese folgen – je nach Bedarf – Laborwerte und eine körperliche Untersuchung. Daraus erstellen wir deinen umfassenden, individuellen Behandlungsplan. Dabei greifen wir auf ein großes Netzwerk aus Therapeuten, Ärzten und Zahnärzten zurück.</p>
+    </section>
+
+    <!-- ============ HERAUSFORDERUNGEN ============ -->
+    <section class="section--tight container">
+      <div class="challenge-card">
+        <div class="h-center" style="max-width:800px;margin:0 auto 34px;">
+          <p class="challenge-card__kicker">Die Ausgangslage</p>
+          <h2 style="font-size:clamp(26px,3.4vw,40px);">Häufige Herausforderungen für den Patienten</h2>
+        </div>
+        <div class="challenge-grid">
+          <div class="challenge">
+            <span class="challenge__icon"><svg viewBox="0 0 24 24"><path d="M12 3l9 16H3z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg></span>
+            <p>Oberflächliche Symptombehandlung</p>
+          </div>
+          <div class="challenge">
+            <span class="challenge__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9a2.4 2.4 0 1 1 3.4 2.2c-.8.4-1 .9-1 1.6"/><path d="M12 17h.01"/></svg></span>
+            <p>Wissen nicht, woher die Beschwerden kommen</p>
+          </div>
+          <div class="challenge">
+            <span class="challenge__icon"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></span>
+            <p>Schon viel probiert ohne langfristigen Erfolg</p>
+          </div>
+          <div class="challenge">
+            <span class="challenge__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 15s1.4-2 3.5-2 3.5 2 3.5 2"/><path d="M9 9.5h.01M15 9.5h.01"/></svg></span>
+            <p>Werden nicht ernst genommen</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LÖSUNG (GOLD CHEVRON) ============ -->
+    <section class="solution solution--chevron">
+      <div class="deco" data-parallax="0.1" style="top:-70px;left:-70px;" aria-hidden="true"><span class="enso enso--md" style="transform:rotate(-25deg)"></span></div>
+      <div class="container h-center">
+        <div class="flow" aria-hidden="true">
+          <svg viewBox="0 0 800 330" xmlns="http://www.w3.org/2000/svg">
+            <path class="flow__base" d="M200 116 C200 190 400 195 400 250"/>
+            <path class="flow__base" d="M400 116 C400 180 400 215 400 250"/>
+            <path class="flow__base" d="M600 116 C600 190 400 195 400 250"/>
+            <path class="flow__base" d="M400 250 V322"/>
+            <path class="flow__beam flow__beam--1" d="M200 116 C200 190 400 195 400 250"/>
+            <path class="flow__beam flow__beam--2" d="M400 116 C400 180 400 215 400 250"/>
+            <path class="flow__beam flow__beam--3" d="M600 116 C600 190 400 195 400 250"/>
+            <circle class="flow__ring" cx="200" cy="72" r="44"/>
+            <circle class="flow__ring" cx="400" cy="72" r="44"/>
+            <circle class="flow__ring" cx="600" cy="72" r="44"/>
+            <g class="flow__ico" transform="translate(180.8,52.8) scale(1.6)"><circle cx="11" cy="11" r="7"/><line x1="20.5" y1="20.5" x2="16.65" y2="16.65"/></g>
+            <g class="flow__ico" transform="translate(380.8,52.8) scale(1.6)"><path d="M3 12h4l2 6 4-14 2 8h6"/></g>
+            <g class="flow__ico" transform="translate(580.8,52.8) scale(1.6)"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></g>
+            <circle class="flow__node" cx="400" cy="250" r="6"/>
+          </svg>
+        </div>
+        <h2>Unsere Lösung:<br />Das Cell Reset Konzept</h2>
+        <div class="four-grid" style="margin-top:46px;grid-template-columns:repeat(3,1fr);">
+          <div class="four-card four-card--gold"><span class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>Messbare Ursachenforschung</div>
+          <div class="four-card four-card--gold"><span class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg></span>Wir analysieren die Ursache für deine Beschwerden</div>
+          <div class="four-card four-card--gold"><span class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>Therapie für langfristige Ergebnisse</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DEIN WEG ============ -->
+    <section class="section container">
+      <div class="know">
+        <div>
+          <h2 style="font-size:clamp(28px,3.6vw,44px);">Dein Weg zu dauerhafter Gesundheit</h2>
+          <p class="lead" style="margin-top:18px;">Wenn du immer das Gleiche tust, bekommst du auch immer die gleichen Ergebnisse. Um wirklich etwas zu bewegen, müssen wir manchmal neue Wege gehen.</p>
+          <p class="lead" style="margin-top:14px;">Genau darum geht es bei uns: Wir finden diese frischen, anderen Ansätze in der modernen Medizin und geben sie an dich weiter.</p>
+          <a class="btn" href="anfrage.html" style="margin-top:26px;">Informationsgespräch vereinbaren<small>– Telefonisches 15min Gespräch –</small></a>
+        </div>
+        <div class="img-grid" style="grid-template-columns:1fr 1fr;">
+          <div class="ph" style="--ar: 3 / 4;"><img src="images/behandlung-1.jpg" alt="Behandlung 1" loading="lazy" onerror="this.style.display='none'"><div class="ph__note"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5L5 20"/></svg><span class="ph__label">Behandlung 1</span><span class="ph__dim">600 × 800 · 3:4</span></div></div>
+          <div class="ph" style="--ar: 3 / 4;"><img src="images/behandlung-2.jpg" alt="Behandlung 2" loading="lazy" onerror="this.style.display='none'"><div class="ph__note"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5L5 20"/></svg><span class="ph__label">Behandlung 2</span><span class="ph__dim">600 × 800 · 3:4</span></div></div>
+          <div class="ph" style="--ar: 3 / 4;"><img src="images/behandlung-3.jpg" alt="Behandlung 3" loading="lazy" onerror="this.style.display='none'"><div class="ph__note"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5L5 20"/></svg><span class="ph__label">Behandlung 3</span><span class="ph__dim">600 × 800 · 3:4</span></div></div>
+          <div class="ph" style="--ar: 3 / 4;"><img src="images/behandlung-4.jpg" alt="Behandlung 4" loading="lazy" onerror="this.style.display='none'"><div class="ph__note"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5L5 20"/></svg><span class="ph__label">Behandlung 4</span><span class="ph__dim">600 × 800 · 3:4</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="cta-band">
+      <img class="cta-band__bg" src="https://d8j0ntlcm91z4.cloudfront.net/user_39bpvnosVvqwhbus3q5PhClCw2s/hf_20260606_154108_ebde9d54-7f39-4ece-b0da-2be30ce28a7d.png" alt="" aria-hidden="true" onerror="this.style.display='none'">
+      <div class="container cta-band__inner">
+        <span class="cta-band__eyebrow">Starte jetzt</span>
+        <h2 class="cta-band__title">Wir gehen deinen Beschwerden <span>auf den Grund.</span></h2>
+        <p class="cta-band__sub">Telefonisches 15-Minuten-Informationsgespräch – kostenlos &amp; unverbindlich.</p>
+        <a class="btn-cta" href="anfrage.html">Informationsgespräch vereinbaren <span class="btn-cta__arrow" aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <!-- ============ PATIENTEN / TESTIMONIALS ============ -->
+    <section class="section container" id="patienten">
+      <div class="h-center" style="max-width:820px;margin:0 auto;">
+        <h2 style="font-size:clamp(26px,3.4vw,40px);">Erfahrungen, die Mut machen</h2>
+        <p class="lead" style="margin-top:14px;">Erfahre von anderen Menschen, was eine Behandlung bei uns bewirken kann.</p>
+        <h3 style="margin-top:30px;font-size:26px;">Das sagen Patienten über uns</h3>
+      </div>
+      <div class="testi-grid">
+        <article class="testi">
+          <div class="vid">
+            <img src="images/testi-1.jpg" alt="Patientin Jasmin" loading="lazy" onerror="this.style.display='none'">
+            <span class="vid__ph">Video · testi-1.jpg</span>
+            <button class="vid__play" type="button" aria-label="Video abspielen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+          </div>
+          <h3 class="testi__quote">"Die Schulmedizin konnte mir nicht mehr helfen."</h3>
+          <div class="testi__name">Jasmin</div>
+          <div class="testi__sub">Aus Tübingen</div>
+        </article>
+        <article class="testi">
+          <div class="vid">
+            <img src="images/testi-2.jpg" alt="Patient Alex" loading="lazy" onerror="this.style.display='none'">
+            <span class="vid__ph">Video · testi-2.jpg</span>
+            <button class="vid__play" type="button" aria-label="Video abspielen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+          </div>
+          <h3 class="testi__quote">"Ich stand kurz vor einer Rücken-OP."</h3>
+          <div class="testi__name">Alex</div>
+          <div class="testi__sub">Aus Stuttgart</div>
+        </article>
+        <article class="testi">
+          <div class="vid">
+            <img src="images/testi-3.jpg" alt="Patient Omar" loading="lazy" onerror="this.style.display='none'">
+            <span class="vid__ph">Video · testi-3.jpg</span>
+            <button class="vid__play" type="button" aria-label="Video abspielen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+          </div>
+          <h3 class="testi__quote">"Ich war bei unzähligen Ärzten – geholfen hat keiner."</h3>
+          <div class="testi__name">Omar</div>
+          <div class="testi__sub">52 Jahre alt</div>
+        </article>
+        <article class="testi">
+          <div class="vid">
+            <img src="images/testi-4.jpg" alt="Patientin Anette" loading="lazy" onerror="this.style.display='none'">
+            <span class="vid__ph">Video · testi-4.jpg</span>
+            <button class="vid__play" type="button" aria-label="Video abspielen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+          </div>
+          <h3 class="testi__quote">"Ich fühle mich hier wirklich gesehen."</h3>
+          <div class="testi__name">Anette</div>
+          <div class="testi__sub">Aus Pullingen</div>
+        </article>
+      </div>
+
+      <div class="h-center" style="margin-top:60px;">
+        <h3 style="font-size:26px;">Weitere Patientenstimmen</h3>
+      </div>
+      <div class="testi-more">
+        <div class="vid vid--sm">
+          <img src="images/testi-5.jpg" alt="Patientenstimme" loading="lazy" onerror="this.style.display='none'">
+          <span class="vid__ph">Video · testi-5.jpg</span>
+          <button class="vid__play" type="button" aria-label="Video abspielen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+        </div>
+        <div class="vid vid--sm">
+          <img src="images/testi-6.jpg" alt="Patientenstimme" loading="lazy" onerror="this.style.display='none'">
+          <span class="vid__ph">Video · testi-6.jpg</span>
+          <button class="vid__play" type="button" aria-label="Video abspielen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+        </div>
+        <div class="vid vid--sm">
+          <img src="images/testi-7.jpg" alt="Patientenstimme" loading="lazy" onerror="this.style.display='none'">
+          <span class="vid__ph">Video · testi-7.jpg</span>
+          <button class="vid__play" type="button" aria-label="Video abspielen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+        </div>
+      </div>
+      <p class="testi-count">Mehr als 1.000 zufriedene Patienten</p>
+    </section>
+
+    <!-- ============ ÜBER TOBIAS EMRICH ============ -->
+    <section class="section" id="ueber-uns">
+      <div class="deco" data-parallax="-0.1" style="bottom:-90px;right:-80px;" aria-hidden="true"><span class="enso enso--md" style="transform:rotate(160deg)"></span></div>
+      <div class="container">
+        <div class="about-card">
+          <div class="about__grid">
+            <div class="about__portrait">
+              <div class="ph" style="--ar: 3 / 4;">
+                <img src="images/tobias-ueber.jpg" alt="Tobias Emrich, Gesundheitspraxis Emrich Reutlingen" loading="lazy" onerror="this.style.display='none'">
+                <div class="ph__note"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5L5 20"/></svg><span class="ph__label">Porträt · Tobias Emrich</span><span class="ph__dim">empf. 750 × 1000 px · 3:4 · JPG</span></div>
+                <span class="about__cap">Tobias Emrich · Ihr Therapeut aus Reutlingen</span>
+              </div>
+            </div>
+            <div class="about__content">
+              <p class="about__label">Über uns</p>
+              <h2 style="font-size:clamp(28px,3.6vw,44px);">Der Mensch hinter der Praxis</h2>
+              <p class="lead" style="margin-top:16px;">Tobias Emrich ist Physiotherapeut, Osteopath und Heilpraktiker – und führt die Gesundheitspraxis Emrich in Reutlingen gemeinsam mit seiner Frau.</p>
+              <p style="color:var(--text-muted);margin-top:14px;">Seit über 15 Jahren begleitet er Menschen mit chronischen und komplexen Beschwerden. Sein Blick aufs Ganze – drei Fachrichtungen in einer Hand – erlaubt es ihm, Ursachen zu erkennen, wo andere nur Symptome sehen.</p>
+              <p style="color:var(--text-muted);margin-top:14px;">Aus dieser Erfahrung hat er für Long-Covid und Post-Vac das Cell Reset Konzept entwickelt: messbar, individuell und auf nachhaltige Regeneration ausgerichtet.</p>
+              <a class="btn" href="anfrage.html" style="margin-top:26px;">Informationsgespräch vereinbaren<small>– Telefonisches 15min Gespräch –</small></a>
+              <div class="about__stats">
+                <div><div class="about__stat-num">15+</div><div class="about__stat-label">Jahre Erfahrung</div></div>
+                <div><div class="about__stat-num">3 in 1</div><div class="about__stat-label">Physio · Osteopathie · Heilpraktik</div></div>
+                <div><div class="about__stat-num">DACH</div><div class="about__stat-label">Patienten aus DE · AT · CH</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="about-card__quali">
+            <p class="trust__kicker">Qualifikation &amp; Mitgliedschaften</p>
+            <div class="trust-badges">
+              <span class="trust-badge">Heilpraktiker</span>
+              <span class="trust-badge">Physiotherapeut</span>
+              <span class="trust-badge">Osteopath</span>
+              <span class="trust-badge">Verband der Osteopathie Schule Deutschland (VOSD)</span>
+              <span class="trust-badge">Berufsvereinigung für heilkundliche Osteopathie (hpO)</span>
+              <span class="trust-badge">Deutscher Verband für Physiotherapie (ZVK)</span>
+              <span class="trust-badge">Union Deutscher Heilpraktiker</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ KENNST DU DAS ============ -->
+    <section class="section container">
+      <div class="know">
+        <div>
+          <h2 style="font-size:clamp(28px,3.6vw,44px);">Kennst du das?</h2>
+          <ul class="know__list">
+            <li><span class="arrow">➜</span> Es wird nur an Symptomen herum gedoktert?</li>
+            <li><span class="arrow">➜</span> Du hast die Nase voll von der "5-Minuten-Medizin" und dem ewigen Herumsitzen im Wartezimmer?</li>
+            <li><span class="arrow">➜</span> Du siehst keine Lösung mehr für dich, machst schon so viel und es verändert sich nichts oder es wird schlimmer?</li>
+          </ul>
+          <p>Unsere Patienten kennen diese Fragen nur zu gut und suchen jemanden, der sich Zeit nimmt, Ursachen ermittelt, Zusammenhänge verständlich erläutert und Wege zu mehr Vitalität und gesteigerter Lebensqualität aufzeigt.</p>
+          <a class="btn" href="anfrage.html" style="margin-top:24px;">Informationsgespräch vereinbaren<small>– Telefonisches 15min Gespräch –</small></a>
+        </div>
+        <div class="know__img">
+          <div class="ph" style="--ar: 4 / 5;">
+            <img src="images/tobias-praxis.jpg" alt="Tobias Emrich in der Praxis" loading="lazy" onerror="this.style.display='none'">
+            <div class="ph__note"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5L5 20"/></svg><span class="ph__label">Tobias Emrich · Praxis</span><span class="ph__dim">empf. 1000 × 1250 px · 4:5 · JPG</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SO GEHT ES WEITER (TIMELINE) ============ -->
+    <section class="steps">
+      <div class="container h-center">
+        <h2 style="font-size:clamp(30px,4vw,46px);">So geht es weiter:</h2>
+        <p class="lead">So kannst du einen Termin bei uns vereinbaren</p>
+      </div>
+      <div class="container">
+        <div class="timeline" id="timeline">
+          <div class="timeline__line"><div class="timeline__fill" id="tlFill"></div><span class="timeline__dot" id="tlDot"></span></div>
+
+          <div class="tl-step" data-step="1">
+            <div class="tl-badge">01</div>
+            <article class="tl-card">
+              <div class="ph" style="--ar: 16 / 11;"><img src="images/schritt-1.jpg" alt="Persönliches Vorgespräch" loading="lazy" onerror="this.style.display='none'"><div class="ph__note"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5L5 20"/></svg><span class="ph__label">Schritt 1 · Vorgespräch</span><span class="ph__dim">empf. 1200 × 825 px · 16:11</span></div></div>
+              <div class="tl-card__body">
+                <h3>Persönliches Vorgespräch</h3>
+                <p>Ein kurzes kostenloses Vorgespräch, mit einer unserer geschulten Mitarbeiterinnen, um Sie ein wenig besser kennenzulernen, und die Thematik mit der Sie sich an uns wenden einordnen zu können.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="tl-step tl-step--right" data-step="2">
+            <div class="tl-badge">02</div>
+            <article class="tl-card">
+              <div class="ph" style="--ar: 16 / 11;"><img src="images/schritt-2.jpg" alt="Termin: Erstgespräch und Untersuchung" loading="lazy" onerror="this.style.display='none'"><div class="ph__note"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5L5 20"/></svg><span class="ph__label">Schritt 2 · Erstgespräch</span><span class="ph__dim">empf. 1200 × 825 px · 16:11</span></div></div>
+              <div class="tl-card__body">
+                <h3>Termin: Erstgespräch und Untersuchung</h3>
+                <p>Wir schauen uns genau an, was deine Beschwerden verursacht, damit wir einen Behandlungsplan erstellen können, der wirklich zu dir passt und langfristig hilft.</p>
+                <p>In einem ausführlichen Gespräch gehen wir den Ursachen deiner Symptome auf den Grund und finden heraus, welche Faktoren möglicherweise eine Rolle spielen.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="tl-step" data-step="3">
+            <div class="tl-badge">03</div>
+            <article class="tl-card">
+              <div class="ph" style="--ar: 16 / 11;"><img src="images/schritt-3.jpg" alt="Maßgeschneiderter Behandlungsplan" loading="lazy" onerror="this.style.display='none'"><div class="ph__note"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5L5 20"/></svg><span class="ph__label">Schritt 3 · Behandlungsplan</span><span class="ph__dim">empf. 1200 × 825 px · 16:11</span></div></div>
+              <div class="tl-card__body">
+                <h3>Maßgeschneiderter Behandlungsplan</h3>
+                <p>Wir nutzen eine moderne Methode, um herauszufinden, warum dein Körper nicht richtig funktioniert. So verstehen wir, wie deine Beschwerden entstanden sind.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="tl-step tl-step--right" data-step="4">
+            <div class="tl-badge">04</div>
+            <article class="tl-card">
+              <div class="ph" style="--ar: 16 / 11;"><img src="images/schritt-4.jpg" alt="Neustart – Vitalität – Selbstbestimmt sein" loading="lazy" onerror="this.style.display='none'"><div class="ph__note"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5L5 20"/></svg><span class="ph__label">Schritt 4 · Neustart</span><span class="ph__dim">empf. 1200 × 825 px · 16:11</span></div></div>
+              <div class="tl-card__body">
+                <h3>Neustart – Vitalität – Selbstbestimmt sein</h3>
+                <p>Wir nehmen uns wirklich die Zeit, alle gesammelten Mess- und Untersuchungsergebnisse genau unter die Lupe zu nehmen. Dabei ist uns vor allem wichtig, dass alles messbar und nachhaltig ist.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="h-center" style="margin-top:30px;">
+          <a class="btn btn--lg" href="anfrage.html">Informationsgespräch vereinbaren<small>– Telefonisches 15min Gespräch –</small></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STANDORT ============ -->
+    <section class="section container">
+      <div class="h-center"><h2 style="font-size:clamp(28px,3.6vw,44px);">Unser Standort<br />in Reutlingen, Deutschland</h2></div>
+      <div class="standort-grid">
+        <div class="standort-fotos">
+          <div class="ph" style="--ar: 4 / 3;"><img src="images/standort-1.jpg" alt="Standort / Praxis 1" loading="lazy" onerror="this.style.display='none'"><div class="ph__note"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5L5 20"/></svg><span class="ph__label">Standort 1</span><span class="ph__dim">800 × 600 · 4:3</span></div></div>
+          <div class="ph" style="--ar: 4 / 3;"><img src="images/standort-2.jpg" alt="Standort / Praxis 2" loading="lazy" onerror="this.style.display='none'"><div class="ph__note"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5L5 20"/></svg><span class="ph__label">Standort 2</span><span class="ph__dim">800 × 600 · 4:3</span></div></div>
+          <div class="ph" style="--ar: 4 / 3;"><img src="images/standort-3.jpg" alt="Standort / Praxis 3" loading="lazy" onerror="this.style.display='none'"><div class="ph__note"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5L5 20"/></svg><span class="ph__label">Standort 3</span><span class="ph__dim">800 × 600 · 4:3</span></div></div>
+        </div>
+        <div class="geo-card">
+          <div class="geo reveal" role="img" aria-label="Karte von Baden-Württemberg: Die Praxis sitzt in Reutlingen und behandelt Patienten aus ganz Deutschland, Österreich und der Schweiz.">
+        <svg class="geo__svg" viewBox="-80 -80 825 1000" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="geoFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#0a4a86" />
+              <stop offset="1" stop-color="#042d5f" />
+            </linearGradient>
+            <radialGradient id="geoSweep" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0" stop-color="#ae9b69" stop-opacity="0.5" />
+              <stop offset="1" stop-color="#ae9b69" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+
+          <text class="geo__country" x="332" y="-44" text-anchor="middle">DEUTSCHLANDWEIT</text>
+          <text class="geo__country" x="-46" y="430" text-anchor="middle" transform="rotate(-90 -46 430)">FRANKREICH</text>
+
+          <path class="geo__shape" d="M 474.4 3.4 L 471.5 32.4 L 479.2 34.9 L 489.0 20.9 L 493.2 34.7 L 506.9 20.8 L 516.0 29.4 L 515.2 45.8 L 525.8 61.9 L 513.5 79.7 L 522.5 83.3 L 534.9 69.3 L 531.3 78.1 L 537.6 78.1 L 539.5 104.3 L 557.3 104.0 L 568.2 82.7 L 572.3 95.1 L 581.2 95.0 L 575.3 116.2 L 590.9 133.4 L 578.3 138.6 L 582.3 148.5 L 577.3 152.3 L 586.2 155.9 L 588.7 171.3 L 579.0 179.6 L 584.1 180.7 L 581.8 198.1 L 611.4 217.5 L 600.1 232.6 L 610.4 234.9 L 610.5 252.2 L 633.7 255.6 L 656.6 286.6 L 650.4 296.5 L 656.6 301.5 L 650.3 316.4 L 655.2 329.0 L 646.4 341.3 L 665.1 370.3 L 646.3 378.8 L 652.6 367.6 L 645.1 366.3 L 632.5 381.1 L 630.0 368.6 L 614.7 363.6 L 610.9 377.2 L 626.1 395.9 L 619.8 397.1 L 623.5 424.6 L 604.6 428.1 L 607.1 434.4 L 592.2 446.1 L 560.9 447.0 L 562.2 457.0 L 546.1 473.8 L 567.7 507.1 L 571.7 541.0 L 584.3 568.6 L 583.2 596.4 L 571.0 616.8 L 577.2 624.3 L 576.0 643.2 L 569.9 647.1 L 582.3 664.6 L 567.5 674.9 L 578.6 683.6 L 581.1 712.7 L 571.2 713.0 L 568.7 725.7 L 557.8 708.0 L 544.5 720.6 L 517.6 712.0 L 495.9 736.2 L 455.9 743.3 L 440.7 721.0 L 399.6 712.7 L 339.1 663.2 L 368.8 692.2 L 378.6 715.7 L 365.9 720.6 L 327.4 688.8 L 331.5 694.8 L 316.2 694.2 L 330.7 706.6 L 305.1 720.1 L 296.6 710.4 L 301.2 702.4 L 286.5 690.9 L 278.2 698.3 L 284.2 711.8 L 268.5 706.0 L 269.1 682.6 L 260.1 683.7 L 252.5 669.2 L 246.6 682.7 L 244.4 669.8 L 233.0 666.3 L 234.7 674.9 L 211.6 681.3 L 196.4 711.9 L 211.4 724.1 L 240.3 712.7 L 246.4 721.4 L 239.3 722.8 L 236.6 738.6 L 222.3 725.9 L 208.3 737.0 L 216.7 743.8 L 203.7 748.4 L 179.6 747.2 L 171.0 734.1 L 151.8 729.9 L 125.7 751.3 L 93.6 755.7 L 81.7 740.9 L 66.1 740.5 L 32.3 760.0 L 24.0 751.4 L 34.6 748.6 L 32.6 741.0 L 18.5 745.2 L 0.0 718.4 L 7.4 643.8 L 21.8 612.5 L 9.8 591.3 L 11.9 562.6 L 31.6 528.9 L 37.8 501.5 L 49.2 492.2 L 46.6 468.9 L 62.6 430.1 L 62.6 403.2 L 99.4 348.1 L 125.5 332.6 L 150.1 280.2 L 172.0 264.3 L 186.9 232.0 L 192.6 186.5 L 215.7 163.9 L 206.6 153.2 L 216.5 144.0 L 217.4 132.8 L 209.8 133.2 L 219.6 116.5 L 205.5 113.6 L 210.4 105.9 L 199.6 79.1 L 201.8 67.8 L 238.1 88.3 L 245.6 79.3 L 240.1 58.5 L 261.8 53.8 L 258.2 70.0 L 268.8 89.3 L 307.4 92.9 L 302.4 105.4 L 290.8 104.5 L 293.5 116.7 L 284.7 124.4 L 297.5 128.9 L 319.2 110.0 L 319.0 92.7 L 359.0 89.9 L 349.9 81.2 L 353.6 68.7 L 387.0 67.6 L 399.5 43.9 L 422.6 47.7 L 424.7 25.2 L 418.2 18.9 L 410.7 27.6 L 415.7 20.1 L 397.8 16.4 L 404.1 15.1 L 401.5 6.4 L 443.1 0.0 L 457.3 15.0 L 457.0 2.4 L 474.4 3.4 Z" />
+
+          <text class="geo__hint" x="370.1" y="326" text-anchor="middle">Stuttgart</text>
+          <circle class="geo__hint-dot" cx="370.1" cy="341.5" r="4.5" />
+
+          <g class="geo__radar">
+            <path class="geo__sweep" d="M374.9 437.6 L374.9 177.6 A260 260 0 0 1 504.9 212.4 Z" />
+            <circle class="geo__ping geo__ping--1" cx="374.9" cy="437.6" r="62" />
+            <circle class="geo__ping geo__ping--2" cx="374.9" cy="437.6" r="62" />
+            <circle class="geo__ping geo__ping--3" cx="374.9" cy="437.6" r="62" />
+            <circle class="geo__pulse" cx="374.9" cy="437.6" r="16" />
+            <circle class="geo__dot-ring" cx="374.9" cy="437.6" r="13" />
+            <circle class="geo__dot" cx="374.9" cy="437.6" r="7.5" />
+            <text class="geo__city-label" x="374.9" y="416" text-anchor="middle">Reutlingen</text>
+          </g>
+
+          <text class="geo__country" x="150" y="892" text-anchor="middle">SCHWEIZ</text>
+          <text class="geo__country" x="560" y="892" text-anchor="middle">ÖSTERREICH</text>
+        </svg>
+        <p class="geo__legend"><b>Standort Reutlingen</b> — wir behandeln Patienten aus ganz Deutschland, Österreich &amp; der Schweiz.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section container">
+      <div class="h-center">
+        <p class="eyebrow">Unsere Antworten auf deine Fragen</p>
+        <h2 style="font-size:clamp(28px,3.6vw,44px);">Häufige Fragen</h2>
+      </div>
+      <div class="faq accordion">
+        <div class="acc-item">
+          <button class="acc-head">Was unterscheidet euch von meinem Hausarzt?</button>
+          <div class="acc-body"><p>Der Hausarzt arbeitet meist mit einem Standard-Blutbild, das bei Long-Covid und Post-Vac häufig unauffällig bleibt – obwohl du klare Beschwerden hast. Wir nehmen uns Zeit für eine tiefergehende, ganzheitliche Bestandsaufnahme, suchen gezielt nach den Ursachen und stellen darauf einen individuellen Plan zusammen, statt nur einzelne Symptome zu behandeln.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Werden die Kosten von der Krankenkasse übernommen?</button>
+          <div class="acc-body"><p>Leistungen aus dem Bereich der Heilpraktik sind in der Regel keine Leistung der gesetzlichen Krankenkassen. Je nach privater Krankenversicherung oder Zusatzversicherung ist eine (teilweise) Erstattung möglich. Im kostenlosen Erstgespräch erklären wir dir transparent, womit du rechnen kannst.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Muss ich für die Behandlung nach Reutlingen kommen?</button>
+          <div class="acc-body"><p>Unsere Praxis ist in Reutlingen – wir betreuen aber Patienten aus ganz Deutschland, Österreich und der Schweiz. Wie viel Behandlung vor Ort sinnvoll ist, hängt von deinem individuellen Fall ab. Das klären wir gemeinsam im Erstgespräch.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Wie läuft das kostenlose Erstgespräch ab?</button>
+          <div class="acc-body"><p>Es ist ein telefonisches Gespräch von rund 15 Minuten. Wir lernen deine Situation kennen, ordnen deine Beschwerden ein und klären gemeinsam, ob und wie unser Konzept dir helfen kann – unverbindlich und ohne Druck.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Hilft das Konzept auch bei Post-Vac?</button>
+          <div class="acc-body"><p>Ja. Long-Covid und Post-Vac haben verwandte Mechanismen – unter anderem die Belastung durch das Spike-Protein. Unser Cell Reset Konzept ist auf beide Beschwerdebilder ausgerichtet.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Kann ich sicher sein, dass die Behandlung bei mir wirkt?</button>
+          <div class="acc-body"><p>Jeder Mensch und jeder Verlauf ist anders, deshalb geben wir keine pauschalen Heilungsversprechen. Was wir versprechen: eine gründliche Ursachensuche, einen ehrlichen Plan und eine Begleitung, die dich ernst nimmt. Im Erstgespräch schätzen wir gemeinsam ein, wie realistisch eine Verbesserung in deinem Fall ist.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Können Kinder Post-/Long-Covid bekommen und wie ist der Verlauf bei ihnen?</button>
+          <div class="acc-body"><p>Obwohl Kinder seltener als Erwachsene an COVID-19 erkranken, können auch sie nach einer Infektion an Post-/Long-Covid-Symptomen leiden. Ähnlich wie bei Erwachsenen treten vor allem Erschöpfung, Gedächtnis- und Konzentrationsstörungen, Kopf-, Bauch- und Halsschmerzen, Husten, Schlafprobleme, ein eingeschränkter Geruchssinn sowie Muskel- und Gelenkschmerzen auf.</p></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <a class="footer-logo" href="index.html">
+        <img class="nav__logo-img" src="images/logo.png" alt="EMRICH Gesundheitspraxis" />
+      </a>
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a>
+      </div>
+      <hr class="footer-divider" />
+      <a href="https://www.schmidtke-gmbh.de" target="_blank" rel="noopener" class="footer-credit">
+        <span class="footer-credit__label">Marketing von</span>
+        <span class="schmidtke-logo">schmidtke<span class="schmidtke-dot"></span></span>
+      </a>
+      <div class="fine">
+        <p>© 2026 EMRICH Gesundheitspraxis</p>
+        <p>Die Informationen auf unserer Website beinhalten keine Heilungsversprechen.</p>
+        <p>This site is not a part of the Facebook™ website or Facebook™ Inc. Additionally, this site is NOT endorsed by Facebook™ in any way. FACEBOOK™ is a trademark of FACEBOOK™, Inc.</p>
       </div>
     </div>
-    <div class="step">
-      <div class="when">Diese Woche</div>
-      <div class="what">
-        <h4>Conversion-Tracking neu aufsetzen & testen</h4>
-        <p>Wir prüfen den Tracking-Code auf der Website, richten Erweiterte Conversions aktiv ein und führen Test-Submits durch, bis jede Anfrage eindeutig in Google Ads landet.</p>
-      </div>
-    </div>
-    <div class="step">
-      <div class="when">Diese Woche</div>
-      <div class="what">
-        <h4>Anzeigen-Strategie verfeinern</h4>
-        <p>Neue Anzeigentexte, die noch klarer auf Long-Covid- und Post-Vac-Patienten zugeschnitten sind. Frische Headlines, klare Vertrauenssignale, präzisere Calls-to-Action.</p>
-      </div>
-    </div>
-    <div class="step">
-      <div class="when">Nächste Woche</div>
-      <div class="what">
-        <h4>Re-Launch mit sauberer Datenbasis</h4>
-        <p>Sobald Tracking verlässlich liefert und die neuen Anzeigen freigegeben sind, gehen die Kampagnen wieder live — mit einem Conversion-Wert hinterlegt, damit Google nicht nur Klicks, sondern echte Leads optimiert.</p>
-      </div>
-    </div>
-    <div class="step">
-      <div class="when">Laufend</div>
-      <div class="what">
-        <h4>Engmaschiges Monitoring</h4>
-        <p>In den ersten 14 Tagen nach Re-Launch beobachten wir täglich Klicks, Suchanfragen und vor allem die eingehenden Conversions. Erste belastbare Daten erwarten wir innerhalb der ersten 7 Tage.</p>
-      </div>
-    </div>
-  </div>
-
-  <h2><span class="num">5</span>Was das für dich bedeutet</h2>
-  <div class="outlook">
-    <h3>Das Fundament steht — jetzt wird es messbar.</h3>
-    <p>Die wichtigste Nachricht: Deine Anzeigen werden gefunden, geklickt und ernst genommen. Die Nachfrage nach einer Spezialistin für Long Covid und Post Vac ist da — und sie findet zu dir. Mit der jetzt anstehenden Tracking-Optimierung können wir diese Nachfrage nicht nur sehen, sondern systematisch in echte Patienten-Anfragen verwandeln.</p>
-  </div>
-  <ul class="notes">
-    <li>Während der Pause entstehen keine Werbekosten — dein Budget liegt geschützt.</li>
-    <li>Die nicht ausgegebenen Tagesbudgets fließen vollständig in den Re-Launch-Monat zurück.</li>
-    <li>Sobald Tracking & neue Anzeigen stehen, meldet Fabian sich mit dem konkreten Termin für den Re-Launch.</li>
-  </ul>
-
-  <div class="signature">
-    <p>Wenn du Fragen hast oder etwas auf dem Herzen — ruf einfach kurz durch oder schreib mir.</p>
-    <p>Liebe Grüße</p>
-    <p class="name">Fabian</p>
-  </div>
-
-  <footer>
-    <span><strong>Schmidtke GmbH</strong> · Google Ads Betreuung Gesundheitspraxis Emrich</span>
-    <span>Stand: 27. April 2026</span>
   </footer>
 
-</div>
+  <script src="js/main.js"></script>
 </body>
 </html>

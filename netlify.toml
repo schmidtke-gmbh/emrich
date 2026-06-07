@@ -1,0 +1,10 @@
+# Netlify-Konfiguration für die statische Seite
+[build]
+  publish = "."
+
+# Saubere URLs / Standardverhalten ist für statische HTML-Seiten ausreichend.
+# Optional: 404-Weiterleitung auf die Startseite
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
