@@ -76,7 +76,8 @@ if (header) {
     ['.stats__grid', '.stat'],
     ['.vs-grid', '.vs-col'],
     ['.trust-badges', '.trust-badge'],
-    ['.firstvisit-grid', '.fv-card']
+    ['.firstvisit-grid', '.fv-card'],
+    ['.greviews__grid', '.greview']
   ];
   groups.forEach(([parent, child]) => {
     document.querySelectorAll(parent).forEach((par) => {
