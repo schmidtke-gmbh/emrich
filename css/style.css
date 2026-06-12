@@ -819,10 +819,37 @@ section { position: relative; }
 .about__stats { display: flex; gap: 40px; margin-top: 32px; padding-top: 26px; border-top: 1px solid rgba(4,45,95,.12); flex-wrap: wrap; }
 .about__stat-num { font-family: var(--font-head); font-weight: 800; font-size: 2rem; color: var(--gold); line-height: 1; }
 .about__stat-label { font-size: .85rem; color: var(--text-muted); margin-top: 5px; max-width: 170px; }
-@media (max-width: 900px) { .about__grid { grid-template-columns: 1fr; gap: 30px; } }
+.about__grid--rev { grid-template-columns: 1.15fr 0.85fr; }
+@media (max-width: 900px) { .about__grid { grid-template-columns: 1fr; gap: 30px; } .about__grid--rev .about__portrait { order: -1; } }
 .about-card { background: #fff; border: 1px solid rgba(4,45,95,.08); border-radius: 30px; box-shadow: var(--shadow); padding: 44px; }
 .about-card__quali { margin-top: 36px; padding-top: 30px; border-top: 1px solid rgba(4,45,95,.12); text-align: center; }
 .about-card__quali .trust-badge { background: var(--bg); }
+a.trust-badge { text-decoration: none; transition: border-color .2s, color .2s, background .2s; }
+a.trust-badge:hover { border-color: var(--gold); color: var(--gold-dark); }
+
+/* Aus- & Weiterbildungen: kompakte, ausklappbare 2-Spalten-Liste */
+.quali { margin-top: 8px; text-align: center; }
+.quali__wrap { position: relative; max-height: none; }
+.quali__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 36px; text-align: left; }
+.quali__item { display: flex; align-items: flex-start; gap: 11px; padding: 13px 4px; border-bottom: 1px solid rgba(4,45,95,.09); color: var(--navy); font-family: var(--font-head); font-weight: 600; font-size: 15px; line-height: 1.35; text-decoration: none; }
+.quali__item::before { content: ""; flex: 0 0 auto; width: 7px; height: 7px; margin-top: 7px; border-radius: 50%; background: var(--gold); }
+a.quali__item { transition: color .2s; }
+a.quali__item:hover { color: var(--gold-dark); }
+.quali__fade { display: none; position: absolute; left: 0; right: 0; bottom: 0; height: 130px; background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #fff 92%); -webkit-backdrop-filter: blur(1.5px); backdrop-filter: blur(1.5px); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 70%); mask-image: linear-gradient(to bottom, transparent 0%, #000 70%); pointer-events: none; transition: opacity .35s; }
+.quali__more { display: none; margin-top: 20px; align-items: center; gap: 8px; background: transparent; border: 1.5px solid var(--gold); color: var(--navy); font-family: var(--font-head); font-weight: 700; font-size: 14px; padding: 11px 26px; border-radius: 40px; cursor: pointer; transition: background .2s, color .2s; }
+.quali__more::after { content: "▾"; font-size: 12px; transition: transform .3s; }
+.quali__more:hover { background: var(--gold); color: #fff; }
+/* nur mit JS einklappen – ohne JS alles sichtbar */
+.js .quali__wrap { overflow: hidden; max-height: 200px; transition: max-height .55s ease; }
+.js .quali.is-open .quali__wrap { max-height: 1600px; }
+.js .quali__fade { display: block; }
+.js .quali.is-open .quali__fade { opacity: 0; }
+.js .quali__more { display: inline-flex; }
+.js .quali.is-open .quali__more::after { transform: rotate(180deg); }
+@media (max-width: 640px) {
+  .quali__grid { grid-template-columns: 1fr; gap: 0; }
+  .js .quali__wrap { max-height: 210px; }
+}
 @media (max-width: 900px) { .about-card { padding: 26px; } }
 
 /* ===========================================================

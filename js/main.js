@@ -125,34 +125,15 @@ if (header) {
   window.addEventListener('resize', update);
 })();
 
-/* ===== Zahlen-Count-up in der Vertrauens-Leiste ===== */
+/* ===== Aus- & Weiterbildungen aufklappen (alle .quali-Boxen) ===== */
 (function () {
-  const nums = document.querySelectorAll('.stat__num[data-count]');
-  if (!nums.length) return;
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const fmt = (n) => n.toLocaleString('de-DE');
-
-  function run(el) {
-    const target = parseInt(el.dataset.count, 10);
-    const suffix = el.dataset.suffix || '';
-    if (reduce) { el.textContent = fmt(target) + suffix; return; }
-    const dur = 1500;
-    const t0 = performance.now();
-    function step(t) {
-      const p = Math.min(1, (t - t0) / dur);
-      const v = Math.floor(target * (1 - Math.pow(1 - p, 3)));
-      el.textContent = fmt(v) + suffix;
-      if (p < 1) requestAnimationFrame(step);
-      else el.textContent = fmt(target) + suffix;
-    }
-    requestAnimationFrame(step);
-  }
-
-  const io = new IntersectionObserver(
-    (entries) => entries.forEach((e) => {
-      if (e.isIntersecting) { run(e.target); io.unobserve(e.target); }
-    }),
-    { threshold: 0.6 }
-  );
-  nums.forEach((n) => io.observe(n));
+  document.querySelectorAll('.quali').forEach(function (box) {
+    const btn = box.querySelector('.quali__more');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      const open = box.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.textContent = open ? 'Weniger anzeigen' : 'Mehr erfahren';
+    });
+  });
 })();
