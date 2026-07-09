@@ -137,3 +137,21 @@ if (header) {
     });
   });
 })();
+
+/* ===== Patientenvideos: Klick lädt das YouTube-Video ===== */
+(function () {
+  document.querySelectorAll('.vid[data-yt]').forEach(function (vid) {
+    vid.addEventListener('click', function () {
+      if (vid.classList.contains('is-playing')) return;
+      const id = vid.getAttribute('data-yt');
+      const f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+      f.title = 'Patientenvideo';
+      f.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      f.setAttribute('allowfullscreen', '');
+      vid.innerHTML = '';
+      vid.appendChild(f);
+      vid.classList.add('is-playing');
+    });
+  });
+})();

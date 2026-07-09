@@ -821,6 +821,8 @@ section { position: relative; }
 .about__stat-label { font-size: .85rem; color: var(--text-muted); margin-top: 5px; max-width: 170px; }
 .about__grid--rev { grid-template-columns: 1.15fr 0.85fr; }
 @media (max-width: 900px) { .about__grid { grid-template-columns: 1fr; gap: 30px; } .about__grid--rev .about__portrait { order: -1; } }
+.about-head { text-align: center; max-width: 720px; margin: 0 auto 36px; }
+.about-head .about__label { margin-bottom: 10px; }
 .about-card { background: #fff; border: 1px solid rgba(4,45,95,.08); border-radius: 30px; box-shadow: var(--shadow); padding: 44px; }
 .about-card__quali { margin-top: 36px; padding-top: 30px; border-top: 1px solid rgba(4,45,95,.12); text-align: center; }
 .about-card__quali .trust-badge { background: var(--bg); }
@@ -946,6 +948,9 @@ a.quali__item:hover { color: var(--gold-dark); }
 .vid__play::before { content: ''; position: absolute; inset: -12px; border-radius: 50%; border: 2px solid rgba(174,155,105,.55); animation: vidPulse 2.4s ease-out infinite; }
 .vid__play svg { width: 26px; height: 26px; fill: #fff; margin-left: 3px; position: relative; z-index: 1; }
 .vid__play:hover { transform: scale(1.08); }
+.vid[data-yt] { cursor: pointer; }
+.vid iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; z-index: 5; }
+.vid.is-playing::before, .vid.is-playing::after { display: none; }
 @keyframes vidPulse { 0% { transform: scale(1); opacity: .7; } 100% { transform: scale(1.55); opacity: 0; } }
 .testi__quote { margin-top: 16px; font-size: 21px; color: var(--navy); }
 .testi-more { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 30px; }
@@ -990,4 +995,49 @@ a.quali__item:hover { color: var(--gold-dark); }
   .cr__text { background: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; padding: 0; }
   .js .cr__node.reveal { transform: translateY(24px); }
   .js .cr__node.reveal.in { transform: none; }
+}
+
+/* ===========================================================
+   SCHMERZ-SEITE: Video-Platzhalter (Poster)
+   =========================================================== */
+.video-embed--ph { display: flex; align-items: center; justify-content: center; background: linear-gradient(150deg, #06345f, #04223f); }
+.vph { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; }
+.vph__play { position: relative; width: 74px; height: 74px; border-radius: 50%; background: var(--gold); display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 30px rgba(0,0,0,.32); margin-bottom: 18px; }
+.vph__play svg { width: 26px; height: 26px; fill: #fff; margin-left: 3px; }
+.vph__play::before { content: ''; position: absolute; inset: -12px; border-radius: 50%; border: 2px solid rgba(174,155,105,.55); animation: vidPulse 2.4s ease-out infinite; }
+.vph__title { font-family: var(--font-head); font-weight: 700; color: #fff; font-size: 18px; line-height: 1.3; max-width: 320px; }
+.vph__meta { color: rgba(255,255,255,.72); font-size: 13px; margin-top: 8px; }
+.vph__note { margin-top: 16px; font-size: 12px; letter-spacing: .4px; color: var(--gold); border: 1px dashed rgba(174,155,105,.5); padding: 6px 14px; border-radius: 30px; }
+@media (prefers-reduced-motion: reduce) { .vph__play::before { animation: none; } }
+
+/* ===========================================================
+   SCHMERZ-SEITE: Wirbelsäule & Nervensystem – animierte Grafik
+   (nur Animation/Layout; Farben kommen aus den SVG-Attributen)
+   =========================================================== */
+.sci-card__media--spine { background: linear-gradient(150deg, #06345f, #04223f); display: flex; align-items: center; justify-content: center; padding: 22px; }
+.spine { width: 96%; max-width: 400px; text-align: center; }
+.spine__svg { width: 100%; height: auto; display: block; overflow: visible; }
+.spine__cap { display: block; margin-top: 12px; color: rgba(255,255,255,.85); font-family: var(--font-head); font-weight: 600; font-size: 14px; letter-spacing: .4px; }
+.spine__aura { transform-box: fill-box; transform-origin: center; animation: spineAura 5s ease-in-out infinite; }
+.spine__hot-glow { transform-box: fill-box; transform-origin: center; animation: spineHot 2.6s ease-in-out infinite; }
+.spine__disc-hot { transform-box: fill-box; transform-origin: center; animation: spineDisc 2.6s ease-in-out infinite; }
+.spine__wave { opacity: 0; transform-box: fill-box; transform-origin: center; }
+.spine__wave--1 { animation: spineWave 3s ease-out infinite; }
+.spine__wave--2 { animation: spineWave 3s ease-out infinite 1s; }
+.spine__wave--3 { animation: spineWave 3s ease-out infinite 2s; }
+.spine__nerve-pulse { stroke-dasharray: 0.08 1; stroke-dashoffset: 1; filter: drop-shadow(0 0 6px rgba(255,225,160,.9)); animation: spinePulse 2.3s linear infinite; }
+.spine__nerve2 { filter: drop-shadow(0 0 3px rgba(255,225,160,.45)); }
+.spine__burst-halo { transform-box: fill-box; transform-origin: center; animation: spineHot 2.3s ease-in-out infinite; }
+.spine__burst { transform-box: fill-box; transform-origin: center; animation: spineDisc 2.3s ease-in-out infinite; }
+.spine__spark { transform-box: fill-box; transform-origin: center; animation: spineSpark 2.3s ease-in-out infinite; }
+@keyframes spineAura { 0%, 100% { opacity: .6; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } }
+@keyframes spineHot { 0%, 100% { opacity: .28; transform: scale(1); } 50% { opacity: .6; transform: scale(1.14); } }
+@keyframes spineDisc { 0%, 100% { opacity: .92; } 50% { opacity: 1; } }
+@keyframes spineWave { 0% { transform: scale(.5); opacity: .75; } 80% { opacity: .08; } 100% { transform: scale(2.7); opacity: 0; } }
+@keyframes spinePulse { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes spineSpark { 0%, 100% { opacity: .5; transform: scale(.9); } 50% { opacity: 1; transform: scale(1.12); } }
+@media (prefers-reduced-motion: reduce) {
+  .spine__aura, .spine__hot-glow, .spine__disc-hot, .spine__wave, .spine__nerve-pulse, .spine__burst-halo, .spine__burst, .spine__spark { animation: none !important; }
+  .spine__wave { opacity: .22; }
+  .spine__nerve-pulse { stroke-dashoffset: 0.5; }
 }
