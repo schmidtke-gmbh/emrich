@@ -986,7 +986,10 @@ a.quali__item:hover { color: var(--gold-dark); }
   .cr { padding: 36px 20px 32px; }
   .cr__svg { display: none; }
   .cr__stage { position: static; aspect-ratio: auto; display: flex; flex-direction: column; align-items: center; gap: 16px; }
-  .cr__core { position: static; transform: none; margin: 0 auto 8px; }
+  /* WICHTIG: relative, nicht static. Bei static verliert der absolut positionierte
+     .cr__halo (Conic-Gradient) seinen Bezugsrahmen und legt sich als riesiger
+     Gold-Navy-Kreis über die ganze Sektion. */
+  .cr__core { position: relative; transform: none; margin: 0 auto 8px; }
   .cr__node { position: static; transform: none; width: 100%; max-width: 440px;
     display: flex; align-items: center; gap: 16px; text-align: left;
     background: #f6f4ee; border-radius: 16px; padding: 14px 18px; }
@@ -1040,4 +1043,109 @@ a.quali__item:hover { color: var(--gold-dark); }
   .spine__aura, .spine__hot-glow, .spine__disc-hot, .spine__wave, .spine__nerve-pulse, .spine__burst-halo, .spine__burst, .spine__spark { animation: none !important; }
   .spine__wave { opacity: .22; }
   .spine__nerve-pulse { stroke-dashoffset: 0.5; }
+}
+
+/* ===========================================================
+   INSULIN / ZELLSTOFFWECHSEL (animiert, Landingpage Stoffwechsel)
+   Insulin dockt an -> Kanal oeffnet -> Glukose stroemt in die Zelle
+   =========================================================== */
+.sci-card__media--ins { background: linear-gradient(150deg, #06345f, #04223f); display: flex; align-items: center; justify-content: center; padding: 26px 24px 30px; }
+.ins { width: 94%; max-width: 400px; text-align: center; }
+.ins__svg { width: 100%; height: auto; display: block; overflow: visible; }
+.ins__cap { display: block; margin-top: 22px; color: rgba(255,255,255,.85); font-family: var(--font-head); font-weight: 600; font-size: 14px; letter-spacing: .4px; }
+
+.ins__glow { transform-box: fill-box; transform-origin: center; animation: insGlow 5s ease-in-out infinite; }
+.ins__orbit { fill: none; stroke: rgba(174,155,105,.4); stroke-width: 2; stroke-dasharray: 2 14; stroke-linecap: round;
+  transform-box: fill-box; transform-origin: center; animation: insOrbit 28s linear infinite; }
+.ins__membrane { fill: rgba(174,155,105,.07); stroke: var(--gold); stroke-width: 4; }
+.ins__inner { fill: none; stroke: rgba(174,155,105,.28); stroke-width: 1.5; }
+
+.ins__gate { fill: #0a3a68; stroke: var(--gold); stroke-width: 3; }
+.ins__gate--open { stroke: #f3e6c5; filter: drop-shadow(0 0 7px rgba(243,230,197,.75));
+  transform-box: fill-box; transform-origin: center; animation: insGate 3.2s ease-in-out infinite; }
+
+.ins__core { transform-box: fill-box; transform-origin: center; animation: insCore 3.2s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(243,230,197,.55)); }
+.ins__core-halo { fill: rgba(243,230,197,.16); transform-box: fill-box; transform-origin: center; animation: insHalo 3.2s ease-in-out infinite; }
+.ins__core-label { fill: #06345f; font-family: var(--font-head), Roboto, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: .3px; }
+.ins__wave { fill: none; stroke: rgba(243,230,197,.55); stroke-width: 2; opacity: 0;
+  transform-box: fill-box; transform-origin: center; }
+.ins__wave--1 { animation: insWave 3.2s ease-out infinite; }
+.ins__wave--2 { animation: insWave 3.2s ease-out infinite 1.6s; }
+
+.ins__glu { fill: rgba(243,230,197,.92); filter: drop-shadow(0 0 5px rgba(243,230,197,.5)); opacity: 0; }
+.ins__glu--a1 { animation: insFlowA 3.2s ease-in infinite; }
+.ins__glu--a2 { animation: insFlowA 3.2s ease-in infinite 1.6s; }
+.ins__glu--b1 { animation: insFlowB 3.2s ease-in infinite .5s; }
+.ins__glu--b2 { animation: insFlowB 3.2s ease-in infinite 2.1s; }
+.ins__glu--c1 { animation: insFlowC 3.2s ease-in infinite 1s; }
+.ins__glu--c2 { animation: insFlowC 3.2s ease-in infinite 2.6s; }
+
+.ins__key { fill: var(--gold); }
+.ins__key--l { opacity: 0; animation: insDockL 3.2s ease-in-out infinite; }
+.ins__key--r { opacity: 0; animation: insDockR 3.2s ease-in-out infinite 1.6s; }
+.ins__key--docked { fill: #f3e6c5; filter: drop-shadow(0 0 6px rgba(243,230,197,.7));
+  transform-box: fill-box; transform-origin: center; animation: insCore 3.2s ease-in-out infinite; }
+
+.ins__label { fill: rgba(255,255,255,.7); font-family: Roboto, sans-serif; font-size: 13px; letter-spacing: .3px; }
+
+@keyframes insGlow { 0%, 100% { opacity: .55; transform: scale(1); } 50% { opacity: 1; transform: scale(1.06); } }
+@keyframes insOrbit { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes insGate { 0%, 100% { opacity: .85; transform: scale(1); } 50% { opacity: 1; transform: scale(1.1); } }
+@keyframes insCore { 0%, 100% { opacity: .9; transform: scale(1); } 50% { opacity: 1; transform: scale(1.08); } }
+@keyframes insHalo { 0%, 100% { opacity: .5; transform: scale(1); } 50% { opacity: .9; transform: scale(1.12); } }
+@keyframes insWave { 0% { transform: scale(.55); opacity: .7; } 80% { opacity: .06; } 100% { transform: scale(2.4); opacity: 0; } }
+
+/* Glukose links: Start (96,40) -> Kanal (167.5,109) -> Kern (220,200) */
+@keyframes insFlowA {
+  0%   { transform: translate(0, 0); opacity: 0; }
+  10%  { opacity: 1; }
+  42%  { transform: translate(71.5px, 69px); opacity: 1; }
+  90%  { transform: translate(124px, 160px); opacity: .95; }
+  100% { transform: translate(124px, 160px); opacity: 0; }
+}
+/* Glukose mitte: Start (220,34) -> Kanal (220,95) -> Kern (220,200) */
+@keyframes insFlowB {
+  0%   { transform: translate(0, 0); opacity: 0; }
+  10%  { opacity: 1; }
+  42%  { transform: translate(0, 61px); opacity: 1; }
+  90%  { transform: translate(0, 166px); opacity: .95; }
+  100% { transform: translate(0, 166px); opacity: 0; }
+}
+/* Glukose rechts: Start (348,40) -> Kanal (272.5,109) -> Kern (220,200) */
+@keyframes insFlowC {
+  0%   { transform: translate(0, 0); opacity: 0; }
+  10%  { opacity: 1; }
+  42%  { transform: translate(-75.5px, 69px); opacity: 1; }
+  90%  { transform: translate(-128px, 160px); opacity: .95; }
+  100% { transform: translate(-128px, 160px); opacity: 0; }
+}
+/* Insulin links: Start (26,150) -> andocken (161,98) */
+@keyframes insDockL {
+  0%   { transform: translate(0, 0); opacity: 0; }
+  12%  { opacity: 1; }
+  45%  { transform: translate(135px, -52px); opacity: 1; }
+  82%  { transform: translate(135px, -52px); opacity: 1; }
+  100% { transform: translate(135px, -52px); opacity: 0; }
+}
+/* Insulin rechts: Start (414,150) -> andocken (279,98) */
+@keyframes insDockR {
+  0%   { transform: translate(0, 0); opacity: 0; }
+  12%  { opacity: 1; }
+  45%  { transform: translate(-135px, -52px); opacity: 1; }
+  82%  { transform: translate(-135px, -52px); opacity: 1; }
+  100% { transform: translate(-135px, -52px); opacity: 0; }
+}
+
+@media (max-width: 700px) {
+  .ins__label { font-size: 15px; }
+  .ins__cap { font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ins__glow, .ins__orbit, .ins__gate--open, .ins__core, .ins__core-halo, .ins__wave,
+  .ins__glu, .ins__key--l, .ins__key--r, .ins__key--docked { animation: none !important; }
+  .ins__glu { opacity: .9; }
+  .ins__key--l { opacity: 1; transform: translate(135px, -52px); }
+  .ins__key--r { opacity: 1; transform: translate(-135px, -52px); }
+  .ins__wave { opacity: .2; }
 }
