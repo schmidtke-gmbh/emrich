@@ -1149,3 +1149,107 @@ a.quali__item:hover { color: var(--gold-dark); }
   .ins__key--r { opacity: 1; transform: translate(-135px, -52px); }
   .ins__wave { opacity: .2; }
 }
+
+/* ===========================================================
+   KEYWORD-BADGE (Hero Stoffwechsel-Landingpage)
+   =========================================================== */
+.badge--kw { font-weight: 700; letter-spacing: 1.4px; }
+.badge--kw i { font-style: normal; opacity: .55; margin: 0 5px; }
+
+/* ===========================================================
+   THEMENFELDER-CARDS (unter dem Hero)
+   =========================================================== */
+.topics { background: #fff; padding: 76px 0 84px; }
+.topics__head { text-align: center; max-width: 680px; margin: 0 auto 40px; }
+.topics__head h2 { font-size: clamp(28px, 3.4vw, 40px); color: var(--navy); margin-top: 8px; }
+.topics__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.topic {
+  display: flex; flex-direction: column; text-decoration: none;
+  background: var(--bg); border: 1px solid rgba(4,45,95,.08); border-radius: 20px;
+  padding: 30px 26px 26px; transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+.topic:hover, .topic:focus-visible { transform: translateY(-6px); box-shadow: 0 22px 44px rgba(4,45,95,.14); border-color: rgba(174,155,105,.55); }
+.topic__icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 58px; height: 58px; border-radius: 50%; background: #fff;
+  border: 1px solid rgba(174,155,105,.5); margin-bottom: 20px; flex: 0 0 auto;
+}
+.topic__icon svg { width: 28px; height: 28px; stroke: var(--gold); fill: none; }
+.topic__body { display: flex; flex-direction: column; flex: 1; }
+.topic:hover .topic__icon { background: var(--gold); }
+.topic:hover .topic__icon svg { stroke: #fff; }
+.topic__title { font-family: var(--font-head); font-weight: 700; font-size: 20px; color: var(--navy); margin-bottom: 8px; line-height: 1.25; }
+.topic__text { color: var(--text-muted); font-size: 15px; line-height: 1.5; margin-bottom: 18px; }
+.topic__more {
+  margin-top: auto; font-family: var(--font-head); font-weight: 700; font-size: 14px;
+  color: var(--gold); display: inline-flex; align-items: center; gap: 7px;
+}
+.topic__more::after { content: '→'; transition: transform .28s ease; }
+.topic:hover .topic__more::after { transform: translateX(5px); }
+
+@media (max-width: 1000px) { .topics__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) {
+  .topics { padding: 54px 0 58px; }
+  .topics__grid { grid-template-columns: 1fr; gap: 16px; }
+  .topic { flex-direction: row; align-items: flex-start; gap: 18px; padding: 22px 20px; }
+  .topic__icon { width: 50px; height: 50px; margin-bottom: 0; }
+  .topic__icon svg { width: 24px; height: 24px; }
+  .topic__body { flex: 1; }
+  .topic__title { font-size: 18px; }
+  .topic__text { margin-bottom: 0; font-size: 14px; }
+  .topic__more { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .topic, .topic__more::after { transition: none; }
+  .topic:hover { transform: none; }
+}
+
+/* ===========================================================
+   WERTE-ZUSAMMENHANG (animiert, Sektion "Warum die Werte zusammenhängen")
+   Vier Faktoren, sechs Verbindungen, Pulse zeigen die Wechselwirkung
+   =========================================================== */
+.sci-card__media--wz { background: linear-gradient(150deg, #06345f, #04223f); display: flex; align-items: center; justify-content: center; padding: 26px 22px 30px; }
+.wz { width: 96%; max-width: 430px; text-align: center; }
+.wz__svg { width: 100%; height: auto; display: block; overflow: visible; }
+.wz__cap { display: block; margin-top: 16px; color: rgba(255,255,255,.85); font-family: var(--font-head); font-weight: 600; font-size: 14px; letter-spacing: .4px; }
+
+.wz__line { stroke: rgba(174,155,105,.42); stroke-width: 2; }
+.wz__pulse { stroke: #f3e6c5; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 0.14 1; stroke-dashoffset: 1;
+  filter: drop-shadow(0 0 6px rgba(243,230,197,.85)); animation: wzPulse 3s linear infinite; }
+.wz__pulse--2 { animation-delay: .5s; }
+.wz__pulse--3 { animation-delay: 1s; }
+.wz__pulse--4 { animation-delay: 1.5s; }
+.wz__pulse--5 { animation-delay: .25s; }
+.wz__pulse--6 { animation-delay: 1.75s; }
+
+.wz__arrow { fill: var(--gold); animation: wzArrow 3s ease-in-out infinite; }
+.wz__arrow--2 { animation-delay: .5s; }
+.wz__arrow--3 { animation-delay: 1s; }
+.wz__arrow--4 { animation-delay: 1.5s; }
+
+.wz__ring { fill: rgba(174,155,105,.10); stroke: var(--gold); stroke-width: 2.5; }
+.wz__glow { fill: rgba(243,230,197,.20); transform-box: fill-box; transform-origin: center; animation: wzGlow 3s ease-in-out infinite; }
+.wz__node--2 .wz__glow { animation-delay: .75s; }
+.wz__node--3 .wz__glow { animation-delay: 1.5s; }
+.wz__node--4 .wz__glow { animation-delay: 2.25s; }
+.wz__icon { fill: none; stroke: #f3e6c5; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.wz__label { fill: #fff; font-family: var(--font-head), Roboto, sans-serif; font-weight: 700; font-size: 16px; letter-spacing: .2px; }
+
+.wz__badge { fill: #06345f; stroke: rgba(174,155,105,.55); stroke-width: 1.5; }
+.wz__badge-text { fill: var(--gold); font-family: Roboto, sans-serif; font-size: 13px; letter-spacing: .3px; }
+
+@keyframes wzPulse { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes wzGlow { 0%, 100% { opacity: .18; transform: scale(1); } 50% { opacity: .55; transform: scale(1.13); } }
+@keyframes wzArrow { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
+
+@media (max-width: 700px) {
+  .wz__label { font-size: 17px; }
+  .wz__badge-text { font-size: 14px; }
+  .wz__cap { font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wz__pulse, .wz__glow, .wz__arrow { animation: none !important; }
+  .wz__pulse { stroke-dashoffset: .5; }
+  .wz__glow { opacity: .3; }
+  .wz__arrow { opacity: .8; }
+}
