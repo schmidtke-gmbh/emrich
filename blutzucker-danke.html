@@ -73,7 +73,13 @@ main{flex:1;padding:14px 0 70px}
 
 @media(max-width:780px){.card__grid{grid-template-columns:1fr;gap:30px}.cover{max-width:250px;margin:0 auto}}
 @media(max-width:620px){body{font-size:17px}.card{padding:36px 24px}.next{padding:28px 22px}.dl{width:100%}}
-@media(prefers-reduced-motion:reduce){.dl{transition:none}.dl:hover{transform:none}}
+@keyframes ctaPulse{
+  0%,100%{transform:translateY(0) scale(1);box-shadow:0 12px 28px rgba(174,155,105,.34)}
+  50%    {transform:translateY(-3px) scale(1.012);box-shadow:0 20px 42px rgba(174,155,105,.54)}
+}
+.dl{animation:ctaPulse 2.3s ease-in-out infinite;will-change:transform}
+.dl:hover{animation-duration:1.1s}
+@media(prefers-reduced-motion:reduce){.dl{animation:none;transition:none}.dl:hover{transform:none}}
 </style>
 </head>
 <body>
