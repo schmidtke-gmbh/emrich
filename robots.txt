@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Funnel- und Danke-Seiten gehoeren nicht in den Index.
+# Die Seiten tragen zusaetzlich ein noindex-Meta, das hier ist die zweite Absicherung.
+Disallow: /anfrage
+Disallow: /anfrage-schmerz
+Disallow: /anfrage-stoffwechsel
+Disallow: /danke
+Disallow: /warteliste-bestaetigen
+Disallow: /warteliste-danke
+
+Sitemap: https://emrich-gesundheitspraxis.de/sitemap.xml

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Du bist dabei | SCHMERZ RESET Warteliste</title>
+<meta name="description" content="Dein Platz auf der Warteliste für SCHMERZ RESET ist gesichert.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#042d5f">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#fff; --on-dark:rgba(255,255,255,.84); --gold-glow:rgba(174,155,105,.38); --navy:#042d5f; --navy-deep:#022146; --gold:#ae9b69; --gold-dark:#9c8a59;
+  --bg:#e8eef6; --bg-warm:#f4f1ec; --text:#042d5f; --text-muted:#3c5170;
+  --line:rgba(4,45,95,.10); --shadow:0 18px 45px rgba(4,45,95,.10);
+  --shadow-lg:0 28px 70px rgba(4,45,95,.16); --radius:22px;
+  --font-head:'Montserrat',-apple-system,'Segoe UI',sans-serif;
+  --font-body:'Roboto',-apple-system,'Segoe UI',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{overflow-x:clip}
+body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.6;font-size:18px;overflow-x:clip;display:flex;flex-direction:column;min-height:100vh;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--font-head);font-weight:700;line-height:1.14;color:var(--navy);text-wrap:balance}
+p{text-wrap:pretty}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:100%;max-width:820px;margin:0 auto;padding:0 24px}
+.lp-head{padding:26px 0}
+.lp-head__inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.lp-head__logo{height:52px;width:auto}
+.lp-head__tag{font-family:var(--font-head);font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+@media(max-width:540px){.lp-head__logo{height:40px}}
+
+main{flex:1;padding:24px 0 80px}
+.card{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-deep) 100%);color:#fff;border-radius:var(--radius);padding:56px 44px;text-align:center;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+.card::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(174,155,105,.20),transparent 70%);top:-170px;right:-130px;pointer-events:none}
+.card>*{position:relative;z-index:1}
+.check{width:78px;height:78px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 26px;box-shadow:0 12px 32px rgba(174,155,105,.38)}
+.check svg{width:38px;height:38px;stroke:#fff;stroke-width:3.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.card h1{color:#fff;font-size:clamp(28px,4vw,42px);margin-bottom:16px}
+.card p{color:rgba(255,255,255,.84);font-size:18px;max-width:560px;margin:0 auto 14px}
+.card strong{color:var(--gold);font-weight:600}
+
+.next{background:#fff;border-radius:var(--radius);padding:40px 38px;margin-top:20px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.next h2{font-size:24px;margin-bottom:24px;text-align:center}
+.steps{list-style:none;display:flex;flex-direction:column;gap:20px}
+.steps li{display:flex;gap:16px;align-items:flex-start}
+.steps .n{flex:0 0 auto;width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:700;font-size:15px}
+.steps b{display:block;font-family:var(--font-head);font-weight:600;font-size:17.5px;color:var(--navy);margin-bottom:3px}
+.steps p{font-size:16px;color:var(--text-muted);margin:0}
+
+.hint{background:var(--bg-warm);border-radius:18px;padding:24px 26px;margin-top:20px;text-align:center;border:1px dashed rgba(174,155,105,.55)}
+.hint p{font-size:16px;color:var(--text-muted);margin:0}
+.hint b{color:var(--navy);font-family:var(--font-head);font-weight:600}
+
+.back{text-align:center;margin-top:34px}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--gold);color:#fff;border:0;border-radius:60px;padding:17px 34px;font-family:var(--font-head);font-weight:600;font-size:17px;cursor:pointer;transition:transform .15s,background .2s;box-shadow:0 10px 26px rgba(174,155,105,.32)}
+.btn:hover{background:var(--gold-dark);transform:translateY(-2px)}
+
+.lp-foot{background:var(--navy-deep);color:rgba(255,255,255,.62);padding:40px 0 36px;font-size:14px}
+.lp-foot a{color:rgba(255,255,255,.86);text-decoration:underline}
+.lp-foot__links{display:flex;gap:20px;justify-content:center;margin-bottom:16px;flex-wrap:wrap}
+.lp-foot p{max-width:700px;margin:0 auto 9px;text-align:center;line-height:1.6}
+.lp-foot__small{font-size:12.5px;color:rgba(255,255,255,.40)}
+@media(max-width:620px){.card{padding:42px 26px}.next{padding:30px 24px}body{font-size:17px}}
+/* Match the waiting list and keep small screens and keyboard focus readable. */
+body{font-weight:500}a:focus-visible{outline:3px solid var(--gold-dark);outline-offset:5px}
+.btn{color:var(--navy-deep);font-weight:700;min-height:54px;max-width:100%;text-align:center}
+.card strong{color:var(--gold);font-weight:700}.lp-foot__small{color:var(--on-dark)}
+@media(max-width:380px){.container{padding-inline:18px}.card{padding:34px 20px}.next{padding:28px 20px}.steps li{gap:12px}.steps b{font-size:17px}.btn{padding-inline:24px}}
+@media(prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<header class="lp-head">
+  <div class="container lp-head__inner">
+    <a href="https://gesundheitspraxis-emrich.de/" aria-label="Zur Startseite der Praxis Emrich">
+      <img src="images/logo.png" alt="EMRICH Gesundheitspraxis" class="lp-head__logo" width="180" height="52">
+    </a>
+    
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="card">
+      <div class="check">
+        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      </div>
+      <h1>Du stehst auf der Warteliste.</h1>
+      <p>Deine Wartelisten-Vorteile für <strong>SCHMERZ RESET</strong> sind vorgemerkt: exklusive Materialien, früherer Zugang und die Möglichkeit, zum niedrigsten Kurspreis einzusteigen.</p>
+    </div>
+
+    <div class="next">
+      <h2>Das hast du dir gesichert</h2>
+      <ol class="steps">
+        <li><span class="n">1</span><div><b>Erste exklusive Materialien</b><p>Du erhältst sie nach deiner Eintragung per E-Mail. Schau dafür auch in deinen Spam-Ordner.</p></div></li>
+        <li><span class="n">2</span><div><b>Deinen frühen Einstieg</b><p>Du erfährst vor der offiziellen Veröffentlichung, wie du früher auf den Kurs zugreifen kannst.</p></div></li>
+        <li><span class="n">3</span><div><b>Den niedrigsten Kurspreis</b><p>Du kannst SCHMERZ RESET zum niedrigsten Preis buchen, den es dafür jemals geben wird. Den Betrag erfährst du vor der Buchung.</p></div></li>
+        <li><span class="n">4</span><div><b>Neuigkeiten aus erster Hand</b><p>Wir informieren dich über neue Inhalte und den Start. Du hast noch nichts gebucht und kannst dich jederzeit wieder abmelden.</p></div></li>
+      </ol>
+    </div>
+
+    <div class="hint">
+      <p><b>Du möchtest Tobias und seine Praxis kennenlernen?</b><br>
+      In der Praxis in Reutlingen ist auch eine persönliche Untersuchung möglich.</p>
+    </div>
+
+    <div class="back">
+      <a class="btn" href="https://gesundheitspraxis-emrich.de/">Zur Praxis-Website</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="lp-foot">
+  <div class="container">
+    <div class="lp-foot__links">
+      <a href="https://gesundheitspraxis-emrich.de/impressum/">Impressum</a>
+      <a href="https://gesundheitspraxis-emrich.de/datenschutzerklaerung/">Datenschutz</a>
+    </div>
+    <p>Die Informationen auf dieser Seite dienen der allgemeinen Information und Gesundheitsförderung. Sie beinhalten keine Heilungsversprechen und ersetzen keine ärztliche Diagnose oder Behandlung.</p>
+    <p class="lp-foot__small">© 2026 EMRICH Gesundheitspraxis · Marketing von schmidtke</p>
+  </div>
+</footer>
+
+</body>
+</html>

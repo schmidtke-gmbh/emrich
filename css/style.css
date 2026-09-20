@@ -1253,3 +1253,15 @@ a.quali__item:hover { color: var(--gold-dark); }
   .wz__glow { opacity: .3; }
   .wz__arrow { opacity: .8; }
 }
+
+
+/* ---------------- Einwilligung im Funnel ---------------- */
+.consent { display: flex; align-items: flex-start; gap: 13px; text-align: left; margin-top: 10px; cursor: pointer; }
+.consent input[type=checkbox] { flex: 0 0 auto; width: 22px; height: 22px; margin-top: 2px; accent-color: var(--gold); cursor: pointer; }
+.consent > span { font-size: 15px; line-height: 1.5; color: var(--text-muted); }
+.consent a { color: var(--gold); text-decoration: underline; }
+/* Fehlerzustand: nur Farbe und Outline setzen, keine background-Kurzform,
+   sonst verschwindet die native Haken-Darstellung der Checkbox. */
+.consent.invalid > span { color: var(--red); }
+.consent.invalid input[type=checkbox] { outline: 2px solid var(--red); outline-offset: 2px; }
+.funnel input.invalid, .funnel textarea.invalid { border-color: var(--red); }

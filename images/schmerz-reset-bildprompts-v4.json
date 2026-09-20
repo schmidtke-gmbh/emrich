@@ -1,0 +1,23 @@
+{
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "name": "arbeitsplatz-v4",
+      "prompt": "Use case: photorealistic-natural. Landscape 3:2 premium editorial photo for a German everyday wellbeing website. A white woman about 46 with fair skin, straight dark blonde bob haircut, wearing a muted rust cotton blouse and dark trousers. Sitting at a practical workstation in a small architectural office in Stuttgart, she pauses and lightly touches the side of her neck, thoughtful not exaggerated pain. Real working environment with plans rolled on shelf, desk, monitor turned away and window overlooking blurred central European buildings. Natural skin and anatomy, realistic fingers, soft daylight, candid authentic atmosphere. Subject centered for portrait crop. Different from generic wellness stock. No text, logos, watermark, pain glow or implied medical outcome.",
+      "source": "/Users/fabianschmidtke/.codex/generated_images/01a0b516-4805-7c02-a220-eaec45eea8bd/exec-86907a66-48eb-4cf6-aeb5-b4b9a6e73561.png",
+      "saved_path": "/Users/fabianschmidtke/Desktop/Claude Cowork NEU/Tobias Emrich/emrich-website/images/schmerz-reset-arbeitsplatz-v4.jpg"
+    },
+    {
+      "name": "unterwegs-v4",
+      "prompt": "Use case: photorealistic-natural. Landscape 3:2 premium editorial photograph. A white man age 58, fair skin, short brown-grey hair and neatly trimmed grey beard, ordinary stocky build, wearing a muted blue outdoor jacket and grey trousers. Taking a short pause during a casual walk on a gravel footpath beside an orchard on the Swabian Alb in southern Germany, a timber village roof faintly visible behind meadow. Three-quarter body view, hands resting naturally on a low wooden railing, calm thoughtful expression, looking along path. Natural overcast spring daylight, true-to-life textures, everyday life rather than sport advertising. Center subject for crop. No text, logos, watermark, heroic summit, medical imagery or before/after.",
+      "source": "/Users/fabianschmidtke/.codex/generated_images/01a0b516-4805-7c02-a220-eaec45eea8bd/exec-bdf39bd4-fa8a-44de-a763-d423aa634b4b.png",
+      "saved_path": "/Users/fabianschmidtke/Desktop/Claude Cowork NEU/Tobias Emrich/emrich-website/images/schmerz-reset-unterwegs-v4.jpg"
+    },
+    {
+      "name": "cta-natur-v4",
+      "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial background photograph for a premium German wellbeing landing page CTA. A quiet soft morning landscape on the edge of the Swabian Alb: curving meadow footpath, mature beech trees, rolling distant hills, natural olive greens and warm earth. On the far right side, two small adult figures in their late fifties wearing casual outdoor jackets, seen from behind walking calmly along the path. The left two thirds must be uncluttered darker foliage and meadow with ample quiet negative space for white website text overlay, do not add any text. Premium authentic photography, atmospheric natural light, not overly saturated or sunset fantasy. No logos or watermark, no medical or before/after claims.",
+      "source": "/Users/fabianschmidtke/.codex/generated_images/01a0b516-4805-7c02-a220-eaec45eea8bd/exec-4ba8c6ec-37c3-4455-bef8-0f1b03520efa.png",
+      "saved_path": "/Users/fabianschmidtke/Desktop/Claude Cowork NEU/Tobias Emrich/emrich-website/images/schmerz-reset-cta-natur-v4.jpg"
+    }
+  ]
+}

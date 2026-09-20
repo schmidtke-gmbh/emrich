@@ -14,7 +14,7 @@
   <title>Informationsgespräch vereinbaren | Praxis Emrich</title>
   <meta name="description" content="Vereinbaren Sie Ihr kostenloses 15-minütiges Informationsgespräch bei der Gesundheitspraxis Emrich in Reutlingen." />
   <meta name="robots" content="noindex" />
-  <link rel="stylesheet" href="css/style.css?v=20260815" />
+  <link rel="stylesheet" href="css/style.css?v=20260914" />
   <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
@@ -92,6 +92,7 @@
               <button type="button" class="choice">Facebook</button>
               <button type="button" class="choice">Empfehlung</button>
               <button type="button" class="choice">Artikel</button>
+              <button type="button" class="choice">ChatGPT oder eine andere KI</button>
             </div>
             <input type="hidden" name="quelle" />
             <div class="actions">
@@ -114,6 +115,10 @@
             <p class="funnel__hint">Wir respektieren deine Privatsphäre und geben deine Daten nicht weiter.</p>
             <div class="field"><input type="email" name="email" placeholder="E-Mail-Adresse" required /></div>
             <div class="field"><input type="tel" name="telefon" placeholder="Telefonnummer" required /></div>
+          <label class="consent">
+              <input type="checkbox" name="datenschutz" value="ja" required />
+              <span>Ich habe die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und bin damit einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert und verarbeitet werden.</span>
+            </label>
             <div class="actions">
               <button type="button" class="funnel__back" data-back>Zurück</button>
               <button type="submit" class="btn btn--lg">Anfrage absenden</button>
@@ -126,7 +131,7 @@
     </section>
   </main>
 
-  <script src="js/main.js?v=20260815"></script>
+  <script src="js/main.js?v=20260914"></script>
   <script>
     (function () {
       const form = document.getElementById('funnelForm');
@@ -172,6 +177,14 @@
             setTimeout(function () { if (current < total - 1) { current++; render(); } }, 300);
           });
         });
+      });
+
+
+      // Pflichtfelder: Fehlerzustand sichtbar machen und live zuruecknehmen
+      form.querySelectorAll('[required]').forEach(function (el) {
+        var mark = el.closest('.consent') || el;
+        el.addEventListener('invalid', function () { mark.classList.add('invalid'); });
+        el.addEventListener('change', function () { mark.classList.remove('invalid'); });
       });
 
       render();

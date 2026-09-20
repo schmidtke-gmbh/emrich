@@ -1,0 +1,23 @@
+{
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "name": "alltag-buero-v3",
+      "prompt": "Use case: photorealistic-natural. Landscape 3:2 premium candid editorial photograph for a German wellbeing website. Clearly distinct person and setting: East Asian man age 42, short black hair and dark glasses, average build, wearing a textured olive green casual shirt with sleeves rolled up, sitting at his real modern office workstation. He has paused typing and gently touches the back of his neck while looking out the window thoughtfully. Neutral slight tiredness, not exaggerated pain. Desk with keyboard and monitor to one side, grey office walls, window overlooking city, daylight. Waist-up composition, natural skin and anatomically correct hands. Authentic everyday work moment, not exercise class, no navy exercise clothes, no beige home with chair, no text or logos, no pain glow, no watermark.",
+      "source": "/Users/fabianschmidtke/.codex/generated_images/01a0b516-4805-7c02-a220-eaec45eea8bd/exec-09a86568-ac29-4b18-98b5-3a1fa3a44df7.png",
+      "saved_path": "/Users/fabianschmidtke/Desktop/Claude Cowork NEU/Tobias Emrich/emrich-website/images/schmerz-reset-alltag-buero-v3.jpg"
+    },
+    {
+      "name": "alltag-unterwegs-v3",
+      "prompt": "Use case: photorealistic-natural. Landscape 3:2 premium candid lifestyle photography for a German wellbeing website. Distinct person and outdoor setting: Black woman age 60 with short naturally silver curly hair, fuller average body build, wearing a muted burgundy light jacket over cream sweater and blue jeans, taking an unhurried walk on a green leafy park path. Three-quarter view, full body to knees, natural calm attentive expression, looking toward trees, arms relaxed. Soft overcast daylight, realistic central European park with blurred bench, plants and pathway. Editorial authentic everyday mobility, not fitness ad, not a therapy result or before/after. Natural anatomy and skin texture, no logos, no text, no graphics or watermarks. Keep her face and body centered for a portrait card crop.",
+      "source": "/Users/fabianschmidtke/.codex/generated_images/01a0b516-4805-7c02-a220-eaec45eea8bd/exec-9174a544-e0d6-4e36-b302-bb2d7202f5b3.png",
+      "saved_path": "/Users/fabianschmidtke/Desktop/Claude Cowork NEU/Tobias Emrich/emrich-website/images/schmerz-reset-alltag-unterwegs-v3.jpg"
+    },
+    {
+      "name": "alltag-ruhe-v3",
+      "prompt": "Use case: photorealistic-natural. Landscape 3:2 authentic premium editorial home photograph. Clearly distinct person and scene: a white European man age 68, balding with white hair at the sides and short white beard, stocky ordinary build, wearing a light blue subtly striped linen shirt and dark trousers. Seated comfortably in a moss green upholstered armchair near a bookcase and window, hands naturally resting on thighs, eyes softly closed, taking a quiet pause at the end of the day. Warm reading lamp and blurred terracotta cushion, lived-in home, soft late afternoon daylight. Waist-up with visible hands and knees, realistic skin, calm not ecstatic. Everyday body awareness, no medical treatment, no yoga pose, no athletic clothes, no identical beige exercise room. No text, logos, watermarks or other people.",
+      "source": "/Users/fabianschmidtke/.codex/generated_images/01a0b516-4805-7c02-a220-eaec45eea8bd/exec-5997cdfd-1a15-4a91-a11e-ff3f17a4a086.png",
+      "saved_path": "/Users/fabianschmidtke/Desktop/Claude Cowork NEU/Tobias Emrich/emrich-website/images/schmerz-reset-alltag-ruhe-v3.jpg"
+    }
+  ]
+}
