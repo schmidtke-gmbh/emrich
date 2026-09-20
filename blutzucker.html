@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blutzucker-Selbstcheck kostenlos | Praxis Emrich</title>
+<meta name="description" content="5 Zeichen, dass dein Blutzucker stärker schwankt, als du denkst. Kostenloser Selbstcheck als PDF von Tobias Emrich, Heilpraktiker und Osteopath in Reutlingen.">
+<meta name="robots" content="noindex, follow">
+<meta name="author" content="Tobias Emrich">
+<meta name="theme-color" content="#042d5f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blutzucker-Selbstcheck kostenlos sichern">
+<meta property="og:description" content="5 Zeichen, dass dein Blutzucker stärker schwankt, als du denkst. Kostenlos als PDF.">
+<meta property="og:locale" content="de_DE">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#fff; --on-dark:rgba(255,255,255,.86);
+  --navy:#042d5f; --navy-deep:#022146; --gold:#ae9b69; --gold-dark:#9c8a59; --gold-light:#c4b183;
+  --bg:#e8eef6; --bg-warm:#f4f1ec; --text:#042d5f; --text-muted:#3c5170;
+  --line:rgba(4,45,95,.10);
+  --shadow:0 18px 45px rgba(4,45,95,.10); --shadow-lg:0 28px 70px rgba(4,45,95,.16);
+  --radius:22px;
+  --font-head:'Montserrat',-apple-system,'Segoe UI',sans-serif;
+  --font-body:'Roboto',-apple-system,'Segoe UI',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--text);background:var(--navy-deep);line-height:1.6;font-size:18px;font-weight:500;overflow-x:clip;display:flex;flex-direction:column;min-height:100vh;-webkit-font-smoothing:antialiased}
+h1,h2{font-family:var(--font-head);font-weight:700;line-height:1.1;text-wrap:balance}
+p{text-wrap:pretty}
+a{color:inherit;text-decoration:none}
+a:focus-visible,input:focus-visible{outline:3px solid var(--gold-light);outline-offset:4px}
+img{max-width:100%;display:block}
+.container{width:100%;max-width:1160px;margin:0 auto;padding:0 24px}
+
+/* Kopf */
+.lp-head{padding:22px 0;background:var(--navy-deep)}
+.lp-head__inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.lp-head__logo{height:46px;width:auto}
+.lp-head__tag{font-family:var(--font-head);font-weight:700;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-light)}
+
+/* Hero */
+main{flex:1;background:linear-gradient(162deg,var(--navy) 0%,var(--navy-deep) 100%);position:relative;overflow:hidden;padding:34px 0 64px}
+main::after{content:"";position:absolute;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(174,155,105,.18),transparent 68%);top:-260px;right:-200px;pointer-events:none}
+.hero__grid{
+  position:relative;z-index:1;
+  display:grid;
+  grid-template-columns:1.04fr .96fr;
+  grid-template-areas:"copy mock" "facts form";
+  column-gap:54px;
+  row-gap:8px;
+  align-items:start;
+}
+.hero__copy{grid-area:copy}
+.hero__facts{grid-area:facts;padding-top:4px}
+.hero__form{grid-area:form}
+.mock{grid-area:mock;align-self:end;justify-self:center;width:100%;max-width:430px}
+.mock img{width:100%;height:auto;filter:drop-shadow(0 28px 50px rgba(0,0,0,.34))}
+
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-head);font-weight:700;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light);background:rgba(174,155,105,.14);border:1px solid rgba(174,155,105,.38);padding:8px 16px;border-radius:60px;margin-bottom:20px}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--gold-light);flex:0 0 auto}
+h1{color:#fff;font-size:clamp(29px,3.5vw,42px);margin-bottom:16px;max-width:15ch}
+h1 em{font-style:normal;color:var(--gold-light)}
+.lead{font-size:18px;color:var(--on-dark);margin-bottom:8px;max-width:30ch}
+
+.facts{list-style:none;display:flex;flex-direction:column;gap:10px}
+.facts li{display:flex;gap:12px;align-items:flex-start;font-size:16.5px;color:var(--on-dark)}
+.facts li>span{flex:1;min-width:0}
+.facts b{color:#fff;font-weight:600}
+.facts svg{flex:0 0 auto;width:14px;height:14px;stroke:var(--gold-light);stroke-width:3.4;fill:none;stroke-linecap:round;stroke-linejoin:round;margin-top:7px}
+.author{margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.16);font-size:14.5px;color:rgba(255,255,255,.64)}
+.author b{color:#fff;font-weight:600}
+
+/* Formular */
+.form-card{background:#fff;color:var(--navy);border-radius:var(--radius);padding:30px 28px;max-width:520px;margin-top:30px;box-shadow:var(--shadow-lg)}
+.form-card h2{font-size:20.5px;margin-bottom:6px;color:var(--navy)}
+.form-card__intro{font-size:14.5px;color:var(--text-muted);margin-bottom:20px}
+.field{margin-bottom:15px}
+.field label{display:block;font-family:var(--font-head);font-weight:700;font-size:13.5px;margin-bottom:7px}
+.field input[type=text],.field input[type=email]{width:100%;background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:15px 17px;font-size:16.5px;font-family:var(--font-body);color:var(--navy);transition:border-color .2s,background-color .2s}
+.field input:focus{background-color:#fff;border-color:var(--gold-dark)}
+.consent{display:flex;align-items:flex-start;gap:11px;margin:18px 0;font-size:13px;color:var(--text-muted);line-height:1.55}
+.consent input[type=checkbox]{flex:0 0 auto;width:21px;height:21px;margin-top:2px;accent-color:var(--navy);cursor:pointer}
+.consent a{text-decoration:underline;text-underline-offset:2px}
+.btn{display:block;width:100%;background:var(--gold);color:var(--navy-deep);border:0;border-radius:60px;padding:19px 24px;font-family:var(--font-head);font-weight:700;font-size:16px;min-height:58px;cursor:pointer;text-align:center;-webkit-appearance:none;appearance:none;transition:transform .18s,background-color .2s;box-shadow:0 12px 28px rgba(174,155,105,.34)}
+.btn:hover{background-color:var(--gold-light);transform:translateY(-2px)}
+.form-note{text-align:center;font-size:12.5px;color:var(--text-muted);margin-top:13px}
+.hp{position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden}
+
+/* Footer */
+.lp-foot{background:var(--navy-deep);color:var(--on-dark);padding:32px 0;font-size:13px;border-top:1px solid rgba(255,255,255,.12)}
+.lp-foot a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.lp-foot__links{display:flex;gap:22px;justify-content:center;margin-bottom:14px;flex-wrap:wrap}
+.lp-foot p{max-width:740px;margin:0 auto 8px;text-align:center;line-height:1.6}
+.lp-foot__small{font-size:12px;color:rgba(255,255,255,.5)}
+
+/* Sticky CTA mobil */
+.sticky{display:none}
+
+@media(max-width:940px){
+  .hero__grid{
+    grid-template-columns:minmax(0,1fr);
+    grid-template-areas:"copy" "mock" "facts" "form";
+    row-gap:2px;
+  }
+  .mock{align-self:auto;padding:16px 0 4px;max-width:380px;margin:0 auto}
+  .hero__facts{padding-top:0}
+  .form-card{max-width:none}
+  .lead{max-width:none;margin-bottom:6px}
+  h1{max-width:none}
+}
+@media(max-width:700px){
+  body{font-size:17px;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+  main{padding:26px 0 46px}
+  .lp-head{padding:16px 0}
+  .lp-head__logo{height:38px}
+  .lp-head__tag{font-size:10px}
+  h1{font-size:clamp(28px,7.4vw,38px)}
+  .lead{font-size:17px}
+  .mock{max-width:325px;padding:16px 0 10px}
+  .facts li{font-size:16px}
+  .form-card{padding:24px 20px;margin-top:24px;border-radius:18px}
+  .form-card h2{font-size:19px}
+  .sticky{
+    display:block;position:fixed;left:0;right:0;bottom:0;z-index:40;
+    background:rgba(255,255,255,.97);border-top:1px solid var(--line);
+    padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+    box-shadow:0 -8px 26px rgba(4,45,95,.16);
+  }
+  .sticky a{
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    background:var(--gold);color:var(--navy-deep);border-radius:60px;
+    padding:15px 18px;min-height:52px;
+    font-family:var(--font-head);font-weight:700;font-size:15px;
+  }
+  .sticky svg{width:17px;height:17px;stroke:var(--navy-deep);stroke-width:2.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+}
+@media(max-width:380px){
+  .container{padding-inline:18px}
+  .mock{max-width:270px}
+  .form-card{padding:22px 17px}
+}
+@media(prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<header class="lp-head">
+  <div class="container lp-head__inner">
+    <a href="https://gesundheitspraxis-emrich.de/" aria-label="Zur Startseite der Praxis Emrich">
+      <img src="images/logo-weiss.png" alt="EMRICH Gesundheitspraxis" class="lp-head__logo" width="166" height="46">
+    </a>
+    <span class="lp-head__tag">Kostenloser Selbstcheck</span>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="hero__grid">
+
+      <div class="hero__copy">
+        <span class="eyebrow"><span class="dot"></span>Gratis PDF · 6 Seiten</span>
+        <h1>5 Zeichen, dass dein Blutzucker <em>stärker schwankt,</em> als du denkst</h1>
+        <p class="lead">Für alle, die nachmittags einbrechen, ständig Hunger haben oder trotz Disziplin nicht weiterkommen. Diese Schwankungen spürst du oft Jahre, bevor ein Laborwert auffällig wird.</p>
+      </div>
+
+      <div class="mock">
+        <img src="images/blutzucker-mockup.png" alt="Der Blutzucker-Selbstcheck als PDF: Titelseite mit den Innenseiten dahinter" width="1000" height="835" fetchpriority="high">
+      </div>
+
+      <div class="hero__facts">
+        <ul class="facts">
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Die 5 Zeichen für Schwankungen im Alltag</span></li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Der Versuch über drei Tage, mit Vorlage zum Ausfüllen</span></li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span><b>Die 3 Blutwerte</b> für dein nächstes Labor</span></li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span><b>14 Tage selbst messen</b>, Schritt für Schritt erklärt</span></li>
+        </ul>
+        <p class="author">Von <b>Tobias Emrich</b> · Heilpraktiker und Osteopath in Reutlingen · rund 30 Jahre Praxis, mehrere tausend begleitete Menschen</p>
+      </div>
+
+      <div class="hero__form">
+        <div class="form-card" id="eintragen">
+          <h2>Wohin dürfen wir den Selbstcheck schicken?</h2>
+          <p class="form-card__intro">Vorname und E-Mail eintragen, dann bekommst du das PDF kostenlos zugeschickt.</p>
+
+          <!-- KlickTipp RAW-Formular · Action-URL, Feld-IDs und Feldnamen NICHT verändern -->
+          <div id="form-blutzucker-wrapper">
+          <form id="ktv2-form-blutzucker" accept-charset="UTF-8" method="post" action="https://app.klicktipp.com/api/subscriber/signin.html">
+            <input type="hidden" id="FormField_ApiKey" name="apikey" value="APIKEY_BLUTZUCKER_EINSETZEN">
+            <input type="hidden" id="FormField_Digit" name="fields[fieldDigit]" value="">
+
+            <div class="field">
+              <label for="FormField_FirstName">Vorname</label>
+              <input type="text" id="FormField_FirstName" name="fields[fieldFirstName]" placeholder="Dein Vorname" autocomplete="given-name" required>
+            </div>
+
+            <div class="field">
+              <label for="FormField_EmailAddress">E-Mail-Adresse</label>
+              <input type="email" id="FormField_EmailAddress" name="email" placeholder="deine@email.de" autocomplete="email" inputmode="email" size="40" required>
+            </div>
+
+            <label class="consent">
+              <input type="checkbox" id="consent" required>
+              <span>Ja, schickt mir den Selbstcheck und gelegentlich Hinweise rund um Stoffwechsel und Gesundheit per E-Mail. Ich habe die <a href="https://gesundheitspraxis-emrich.de/datenschutzerklaerung/">Datenschutzerklärung</a> gelesen und bin einverstanden.</span>
+            </label>
+
+            <input type="submit" id="FormSubmit" name="FormSubmit" class="btn" value="Selbstcheck kostenlos anfordern">
+
+            <p class="form-note">100 % kostenlos · kein Abo · jederzeit abbestellbar</p>
+          </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="lp-foot">
+  <div class="container">
+    <div class="lp-foot__links">
+      <a href="https://gesundheitspraxis-emrich.de/impressum/">Impressum</a>
+      <a href="https://gesundheitspraxis-emrich.de/datenschutzerklaerung/">Datenschutz</a>
+      <a href="https://gesundheitspraxis-emrich.de/">Praxis-Website</a>
+    </div>
+    <p>Die Informationen in diesem Selbstcheck dienen der allgemeinen Information und Gesundheitsförderung. Sie sind keine Diagnose, beinhalten keine Heilungsversprechen und ersetzen keine ärztliche Untersuchung oder Behandlung.</p>
+    <p class="lp-foot__small">© 2026 EMRICH Gesundheitspraxis · Marketing von schmidtke</p>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a href="#eintragen">
+    <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Selbstcheck kostenlos sichern
+  </a>
+</div>
+
+<!-- KlickTipp Spam-Schutz. Muss geladen werden, sonst wird das Formular abgelehnt. -->
+<script type="text/javascript" src="https://scripts.cdn.klicktipp.cloud/captcha/protect.js"></script>
+</body>
+</html>

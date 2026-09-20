@@ -9,5 +9,10 @@ Disallow: /anfrage-stoffwechsel
 Disallow: /danke
 Disallow: /warteliste-bestaetigen
 Disallow: /warteliste-danke
+Disallow: /blutzucker-bestaetigen
+Disallow: /blutzucker-danke
+
+# PDF nicht indexieren, sonst umgeht man die Eintragung ueber Google.
+Disallow: /downloads/
 
 Sitemap: https://emrich-gesundheitspraxis.de/sitemap.xml
