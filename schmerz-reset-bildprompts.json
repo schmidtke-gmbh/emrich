@@ -1,0 +1,29 @@
+{
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "name": "alltag-ruecken",
+      "prompt": "Use case: photorealistic-natural. Create a premium editorial lifestyle photograph for a German chronic-pain education website. Landscape 3:2 composition. A relatable woman about 48 with natural midlength brown hair and average build, wearing a muted navy cardigan and cream top, pausing after standing up from a wooden desk in a bright warm home. Three-quarter side view, one hand naturally resting on her lower back, a subtle thoughtful slightly uncomfortable expression, never exaggerated agony. Include hips and upper legs, a linen chair and unfocused closed laptop at left. Authentic real skin, candid unposed moment, soft window daylight, warm off-white and beige room, quiet navy details, premium 50mm editorial photography, no text, no logos, no watermarks, no clinical effects or red pain glow. No before/after, no medical treatment.",
+      "path": "/Users/fabianschmidtke/.codex/generated_images/01a0b516-4805-7c02-a220-eaec45eea8bd/exec-9f2c37df-e378-4e2d-9394-f7b348ff3e43.png",
+      "saved_path": "/Users/fabianschmidtke/Desktop/Claude Cowork NEU/Tobias Emrich/emrich-website/images/schmerz-reset-alltag-ruecken.jpg"
+    },
+    {
+      "name": "beweglichkeit",
+      "prompt": "Use case: photorealistic-natural. Premium editorial lifestyle photography, landscape 3:2 image for an online movement-course website. Relatable man around 52 with short slightly grey hair, average build, navy short-sleeve cotton T-shirt and beige comfortable trousers, sitting on a simple armless oak chair in a calm sunlit home. A relaxed small seated upper-body rotation, hands naturally on opposite thighs, feet flat on ground, turning shoulders gently left without contortion. Full body with head and feet visible and spacious framing for responsive crop. Natural correct anatomy, real skin texture, soft window light, warm off-white wall, oak floor, tiny blurred plant, understated premium fitness editorial photograph rather than sports advertising. No text, graphics, logos, watermarks, equipment, instructor or other people. No exaggerated stretching.",
+      "path": "/Users/fabianschmidtke/.codex/generated_images/01a0b516-4805-7c02-a220-eaec45eea8bd/exec-643c1496-6d1e-423c-8cf8-ed1c3e31d89a.png",
+      "saved_path": "/Users/fabianschmidtke/Desktop/Claude Cowork NEU/Tobias Emrich/emrich-website/images/schmerz-reset-beweglichkeit.jpg"
+    },
+    {
+      "name": "mobilitaet",
+      "prompt": "Use case: photorealistic-natural. Premium editorial movement photograph, landscape 3:2 for a German online movement-course website. Relatable woman age about 50, natural brown hair tied loosely, average build, navy long-sleeve top and warm grey exercise trousers. In a light warm home, standing alongside a simple oak chair, one hand lightly on its back for balance, taking a comfortable small forward step with soft knees, demonstrating approachable everyday mobility. Full body including feet, calm confident face, anatomically correct neutral movement, no deep lunge or contortion. Spacious composition, warm ivory walls, oak floor, diffuse natural daylight, high quality authentic skin and fabric texture, premium wellbeing editorial aesthetic. No text, logos, watermark, pain graphic, instructor or other person.",
+      "path": "/Users/fabianschmidtke/.codex/generated_images/01a0b516-4805-7c02-a220-eaec45eea8bd/exec-85e7e3dd-6031-4197-8b92-a1d52a40c306.png",
+      "saved_path": "/Users/fabianschmidtke/Desktop/Claude Cowork NEU/Tobias Emrich/emrich-website/images/schmerz-reset-mobilitaet.jpg"
+    },
+    {
+      "name": "koerperwahrnehmung",
+      "prompt": "Use case: photorealistic-natural. Premium editorial photograph for a German online movement course, landscape 3:2. Relatable woman about 55 with shoulder-length salt-and-pepper hair, average build, wearing a navy cotton top and beige comfortable trousers, seated upright on a simple armless oak chair by a softly lit window in a calm warm home. Eyes softly closed, shoulders relaxed, hands resting gently and naturally on her lower ribcage for body awareness and breathing. Full upper body and thighs, ample space around subject for crop, anatomically natural fingers and posture. Warm off-white room, oak textures, natural daylight, realistic skin texture, subtle candid wellbeing photography. No yoga lotus pose, no mystical motifs, no text, logos or watermarks, no treatment or medical devices.",
+      "path": "/Users/fabianschmidtke/.codex/generated_images/01a0b516-4805-7c02-a220-eaec45eea8bd/exec-ad398a09-e0df-4125-b7c1-f1cb2bc0d89d.png",
+      "saved_path": "/Users/fabianschmidtke/Desktop/Claude Cowork NEU/Tobias Emrich/emrich-website/images/schmerz-reset-koerperwahrnehmung.jpg"
+    }
+  ]
+}
