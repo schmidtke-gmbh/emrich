@@ -1,6 +1,7 @@
 # Netlify-Konfiguration für die statische Seite
 [build]
   publish = "."
+  functions = "netlify/functions"
 
 # Saubere URLs / Standardverhalten ist für statische HTML-Seiten ausreichend.
 # Optional: 404-Weiterleitung auf die Startseite
