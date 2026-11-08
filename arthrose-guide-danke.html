@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dein Arthrose-Guide | Praxis Emrich</title>
+<meta name="description" content="Dein kostenloser Arthrose-Guide von Tobias Emrich zum Herunterladen.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#042d5f">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#fff; --on-dark:rgba(255,255,255,.86);
+  --navy:#042d5f; --navy-deep:#022146; --gold:#ae9b69; --gold-dark:#9c8a59; --gold-light:#c4b183;
+  --bg:#e8eef6; --bg-warm:#f4f1ec; --text:#042d5f; --text-muted:#3c5170;
+  --line:rgba(4,45,95,.10); --shadow:0 18px 45px rgba(4,45,95,.10);
+  --shadow-lg:0 28px 70px rgba(4,45,95,.16); --radius:22px;
+  --font-head:'Montserrat',-apple-system,'Segoe UI',sans-serif;
+  --font-body:'Roboto',-apple-system,'Segoe UI',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{overflow-x:clip}
+body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.6;font-size:18px;font-weight:500;overflow-x:clip;display:flex;flex-direction:column;min-height:100vh;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--font-head);font-weight:700;line-height:1.12;color:var(--navy);text-wrap:balance}
+p{text-wrap:pretty}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:3px solid var(--gold-dark);outline-offset:5px}
+img{max-width:100%;height:auto;display:block}
+.container{width:100%;max-width:880px;margin:0 auto;padding:0 24px}
+
+.lp-head{padding:24px 0}
+.lp-head__inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.lp-head__logo{height:50px;width:auto}
+@media(max-width:540px){.lp-head__logo{height:38px}}
+
+main{flex:1;padding:14px 0 70px}
+
+.card{background:linear-gradient(158deg,var(--navy) 0%,var(--navy-deep) 100%);color:#fff;border-radius:var(--radius);padding:48px 44px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+.card::after{content:"";position:absolute;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(174,155,105,.20),transparent 70%);top:-180px;right:-140px;pointer-events:none}
+.card__grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr .62fr;gap:44px;align-items:center}
+.check{width:70px;height:70px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;margin-bottom:22px;box-shadow:0 12px 32px rgba(174,155,105,.4)}
+.check svg{width:34px;height:34px;stroke:#fff;stroke-width:3.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.card h1{color:#fff;font-size:clamp(27px,3.8vw,40px);margin-bottom:14px}
+.card p{color:var(--on-dark);font-size:17.5px;margin-bottom:26px}
+.card p strong{color:var(--gold-light);font-weight:700}
+.dl{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--gold);color:var(--navy-deep);border-radius:60px;padding:19px 34px;font-family:var(--font-head);font-weight:700;font-size:16.5px;min-height:58px;box-shadow:0 14px 32px rgba(174,155,105,.38);transition:transform .18s,background-color .2s}
+.dl:hover{background-color:var(--gold-light);transform:translateY(-2px)}
+.dl svg{width:19px;height:19px;stroke:var(--navy-deep);stroke-width:2.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.dl-note{font-size:14px;color:rgba(255,255,255,.62);margin:14px 0 0}
+.cover{border-radius:12px;box-shadow:0 26px 60px rgba(0,0,0,.44);border:1px solid rgba(255,255,255,.18);width:100%;height:auto;aspect-ratio:620/877;object-fit:cover;align-self:center}
+
+.next{background:#fff;border-radius:var(--radius);padding:36px 34px;margin-top:20px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.next h2{font-size:22px;margin-bottom:22px}
+.steps{list-style:none;display:flex;flex-direction:column;gap:18px}
+.steps li{display:flex;gap:15px;align-items:flex-start}
+.steps .n{flex:0 0 auto;width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:700;font-size:14.5px}
+.steps b{display:block;font-family:var(--font-head);font-weight:700;font-size:17px;color:var(--navy);margin-bottom:2px}
+.steps p{font-size:15.5px;color:var(--text-muted);margin:0}
+
+.hint{background:var(--bg-warm);border-radius:18px;padding:24px 26px;margin-top:20px;text-align:center;border:1px dashed rgba(174,155,105,.55)}
+.hint b{color:var(--navy);font-family:var(--font-head);font-weight:700}
+.hint p{font-size:15.5px;color:var(--text-muted);margin:0}
+.hint a{color:var(--navy);text-decoration:underline;text-underline-offset:3px;font-weight:600}
+
+.lp-foot{background:var(--navy-deep);color:var(--on-dark);padding:36px 0 34px;font-size:13.5px}
+.lp-foot a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.lp-foot__links{display:flex;gap:24px;justify-content:center;margin-bottom:16px;flex-wrap:wrap}
+.lp-foot p{max-width:740px;margin:0 auto 9px;text-align:center;line-height:1.6}
+.lp-foot__small{font-size:12.5px;color:rgba(255,255,255,.52)}
+
+@media(max-width:780px){.card__grid{grid-template-columns:1fr;gap:30px}.cover{max-width:250px;margin:0 auto}}
+@media(max-width:620px){body{font-size:17px}.card{padding:36px 24px}.next{padding:28px 22px}.dl{width:100%}}
+@keyframes ctaPulse{
+  0%,100%{transform:translateY(0) scale(1);box-shadow:0 12px 28px rgba(174,155,105,.34)}
+  50%    {transform:translateY(-3px) scale(1.012);box-shadow:0 20px 42px rgba(174,155,105,.54)}
+}
+.dl{animation:ctaPulse 2.3s ease-in-out infinite;will-change:transform}
+.dl:hover{animation-duration:1.1s}
+@media(prefers-reduced-motion:reduce){.dl{animation:none;transition:none}.dl:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<header class="lp-head">
+  <div class="container lp-head__inner">
+    <a href="https://gesundheitspraxis-emrich.de/" aria-label="Zur Startseite der Praxis Emrich">
+      <img src="images/logo.png" alt="EMRICH Gesundheitspraxis" class="lp-head__logo" width="180" height="50">
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="card">
+      <div class="card__grid">
+        <div>
+          <div class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <h1>Hier ist dein Arthrose-Guide.</h1>
+          <p>Danke für deine Eintragung. <strong>Lade dir das PDF jetzt direkt herunter.</strong> Speichere es am besten gleich ab, damit du es später wiederfindest.</p>
+          <a class="dl" href="downloads/emrich-arthrose-guide.pdf" download>
+            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Arthrose-Guide als PDF laden
+          </a>
+          <p class="dl-note">33 Seiten · PDF · ca. 3,6 MB</p>
+        </div>
+        <img src="images/arthrose-cover.jpg" alt="Titelseite des Arthrose-Guides" class="cover" width="620" height="877">
+      </div>
+    </div>
+
+    <div class="next">
+      <h2>So holst du das Meiste heraus</h2>
+      <ol class="steps">
+        <li>
+          <span class="n">1</span>
+          <div>
+            <b>Lade das PDF herunter und speichere es ab</b>
+            <p>Danach in Ruhe das Inhaltsverzeichnis durchgehen und die Kapitel wählen, die zu deinem Gelenk und deinem Alltag passen.</p>
+          </div>
+        </li>
+        <li>
+          <span class="n">2</span>
+          <div>
+            <b>Starte mit Bewegung</b>
+            <p>Kapitel 1 zeigt dir, wie du Kraft, Beweglichkeit und Ausdauer passend dosierst, und vier Übungen „Kraft in der Dehnung“ für zu Hause.</p>
+          </div>
+        </li>
+        <li>
+          <span class="n">3</span>
+          <div>
+            <b>Wähle ein, zwei Anwendungen für deinen Alltag</b>
+            <p>Wärme, Kälte, Wickel, Öle oder der 7-Pflanzen-Tee: Probier aus, was dir guttut, und beachte die Hinweise zu jeder Anwendung.</p>
+          </div>
+        </li>
+        <li>
+          <span class="n">4</span>
+          <div>
+            <b>Schau auf das ganze System</b>
+            <p>Ernährung, Darm, Stress und Schlaf beeinflussen, wie belastbar sich deine Gelenke anfühlen. Auf Seite 29 steht, wie es danach weitergehen kann.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="hint">
+      <p><b>Der Download funktioniert nicht?</b><br>
+      Schreib kurz an <a href="mailto:kontakt@gesundheitspraxis-emrich.de">kontakt@gesundheitspraxis-emrich.de</a>, dann schicken wir dir das PDF direkt zu.</p>
+    </div>
+
+  </div>
+</main>
+
+<footer class="lp-foot">
+  <div class="container">
+    <div class="lp-foot__links">
+      <a href="https://gesundheitspraxis-emrich.de/impressum/">Impressum</a>
+      <a href="https://gesundheitspraxis-emrich.de/datenschutzerklaerung/">Datenschutz</a>
+      <a href="https://gesundheitspraxis-emrich.de/">Praxis-Website</a>
+    </div>
+    <p>Die Informationen in diesem Ratgeber dienen der allgemeinen Information und Gesundheitsförderung. Sie sind keine Diagnose, beinhalten keine Heilungsversprechen und ersetzen keine ärztliche Untersuchung oder Behandlung.</p>
+    <p class="lp-foot__small">© 2026 EMRICH Gesundheitspraxis · Marketing von schmidtke</p>
+  </div>
+</footer>
+
+</body>
+</html>
